@@ -1,0 +1,361 @@
+@import url(
+"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --primary: rgb(255, 146, 91);
+    --bgcolor: #1E1E1E;
+ }
+ 
+body {
+    /* height: 100vh; */
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgb(231, 231, 231);
+}
+ 
+
+header {
+    padding: 18px 10%;
+    background-color: rgba(255, 255, 255, 0.658);
+    width: 100%;
+    box-shadow: 0px 0px 10px 0 rgba(241, 113, 8, 0.856);
+ }
+ .logo{
+    font-size: 25px;
+
+    color:black !important;
+    text-decoration: none;
+ }
+ .logo span{
+    color:  rgb(245, 106, 37);
+    font-weight: 700;
+ }
+ nav {
+    display: flex;
+    justify-content: space-around;
+
+ }
+ #navmenu{
+    margin: 0;
+   
+ }
+ nav ul li {
+    display: inline-block;
+
+    list-style: none;
+    margin: 5px 20px;
+ }
+ 
+ nav ul li a {
+    text-decoration: none;
+    color:black !important;
+    align-items: center;
+    font-size: 22px;
+    position: relative;
+ }
+ 
+ nav ul li a::after {
+    content: "";
+    background-color: var(--primary);
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+ }
+ 
+ nav ul li a:hover::after {
+    width: 100%;
+ }
+ 
+ 
+ 
+ #icon-remove,
+ .hamburger {
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 33px;
+    display: none;
+    cursor: pointer;
+ }
+.title {
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+.login-container{
+    display: flex;
+    margin: 0 10%;
+    background-image: linear-gradient(to right,
+    rgb(255, 195, 110),
+    rgb(255, 146, 91));
+    box-shadow: 8px 8px 20px rgb(128, 128, 128);
+}
+.left-login-div, .right-login-div{
+    width: 50%;
+}
+ .bg-Colors{
+    background-image: linear-gradient(to right,
+    rgb(255, 195, 110),
+    rgb(255, 146, 91));
+ }
+
+ 
+.containers {
+    height: 600px;
+    width:100%;
+    /* width: 500px; */
+    background-color: white;
+   
+    position: relative;
+    overflow: hidden;
+}
+.slider-div{
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+.btn {
+    height: 60px;
+    width: 325px;
+    margin: 20px auto;
+    box-shadow: 10px 10px 30px rgb(254, 215, 188);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.login,
+.signup {
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+ 
+.slider {
+    height: 60px;
+    width: 166px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            rgb(255, 195, 110),
+            rgb(255, 146, 91));
+    position: absolute;
+    top: 80px;
+    left: 220px;
+    transition: all 0.5s ease-in-out;
+}
+ 
+.moveslider {
+    left: 380px;
+}
+ 
+.form-section {
+    height: 500px;
+   
+    padding: 20px 0;
+    display: flex;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    left: 0;
+}
+ 
+.form-section-move {
+    left:-600px;
+}
+ 
+.login-box,
+.signup-box {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+   
+}
+ 
+.login-box {
+    gap: 50px;
+    margin: 0 18%;
+}
+ 
+.signup-box {
+    margin: 0 ;
+    gap: 50px;
+}
+ 
+.inputs {
+    height: 70px;
+    width: 400px;
+    outline: none;
+    border: none;
+    color: rgb(77, 77, 77);
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+ 
+.clkbtn {
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+            rgb(255, 195, 110),
+            rgb(255, 146, 91));
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+ 
+/* For Responsiveness of the page */
+ 
+@media screen and (max-width: 650px) {
+    .container {
+        height: 600px;
+        width: 300px;
+    }
+ 
+    .title {
+        font-size: 15px;
+    }
+ 
+    .btn {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto;
+    }
+ 
+    .login,
+    .signup {
+        font-size: 19px;
+    }
+ 
+    .slider {
+        height: 50px;
+        width: 100px;
+        left: 50px;
+    }
+ 
+    .moveslider {
+        left: 150px;
+    }
+ 
+    .form-section {
+        height: 500px;
+        width: 600px;
+    }
+ 
+    .form-section-move {
+        left: -300px;
+    }
+ 
+    .login-box,
+    .signup-box {
+        height: 100%;
+        width: 300px;
+    }
+ 
+    .inputs {
+        height: 50px;
+        width: 250px;
+        font-size: 15px;
+    }
+ 
+    .clkbtn {
+        height: 50px;
+        width: 130px;
+        font-size: 19px;
+    }
+}
+ 
+@media screen and (max-width: 320px) {
+    .container {
+        height: 600px;
+        width: 250px;
+    }
+ 
+    .heading {
+        font-size: 30px;
+    }
+ 
+    .title {
+        font-size: 10px;
+    }
+ 
+    .btn {
+        height: 50px;
+        width: 200px;
+        margin: 20px auto;
+    }
+ 
+    .login,
+    .signup {
+        font-size: 19px;
+    }
+ 
+    .slider {
+        height: 50px;
+        width: 100px;
+        left: 27px;
+    }
+ 
+    .moveslider {
+        left: 127px;
+    }
+ 
+    .form-section {
+        height: 500px;
+        width: 500px;
+    }
+
+
+
+@media only screen and (max-width:600px) {
+    .hamburger {
+       display: block;
+    }
+ 
+    #icon-remove {
+       display: block;
+       position: absolute;
+       top: 25px;
+       right: 25px;
+    }
+ 
+    nav ul {
+       background-color: var(--bgcolor);
+       position: fixed;
+       top: 0;
+       right: -47%;
+       width: 47%;
+       height: 100vh;
+       padding-top: 10%;
+       transition: right 0.5s;
+ 
+    }
+ 
+    nav ul li {
+       display: block;
+       margin: 15%;
+    }
+ 
+    #navmenu li a {
+       font-size: 24px;
+    }
+ }
+}

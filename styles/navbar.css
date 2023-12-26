@@ -1,0 +1,100 @@
+
+header {
+    padding: 18px 10%;
+    background-color: rgba(255, 255, 255, 0.658);
+    width: 100%;
+    box-shadow: 0px 0px 10px 0 rgba(241, 113, 8, 0.856);
+ }
+ .logo{
+    font-size: 25px;
+
+    color:black !important;
+    text-decoration: none;
+ }
+ .logo span{
+    color:  rgb(245, 106, 37);
+    font-weight: 700;
+ }
+ nav {
+    display: flex;
+    justify-content: space-around;
+
+ }
+ #navmenu{
+    margin: 0;
+   
+ }
+ nav ul li {
+    display: inline-block;
+
+    list-style: none;
+    margin: 5px 20px;
+ }
+ 
+ nav ul li a {
+    text-decoration: none;
+    color:black !important;
+    align-items: center;
+    font-size: 22px;
+    position: relative;
+ }
+ 
+ nav ul li a::after {
+    content: "";
+    background-color: rgb(255, 146, 91);
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+ }
+ 
+ nav ul li a:hover::after {
+    width: 100% !important;
+ }
+ #icon-remove,
+ .hamburger {
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 33px;
+    display: none;
+    cursor: pointer;
+ }
+
+
+
+ 
+
+@media only screen and (max-width:600px) {
+    .hamburger {
+       display: block;
+    }
+ 
+    #icon-remove {
+       display: block;
+       position: absolute;
+       top: 25px;
+       right: 25px;
+    }
+ 
+    nav ul {
+       background-color: var(--bgcolor);
+       position: fixed;
+       top: 0;
+       right: -47%;
+       width: 47%;
+       height: 100vh;
+       padding-top: 10%;
+       transition: right 0.5s;
+ 
+    }
+ 
+    nav ul li {
+       display: block;
+       margin: 15%;
+    }
+ 
+    #navmenu li a {
+       font-size: 24px;
+    }
+ }
