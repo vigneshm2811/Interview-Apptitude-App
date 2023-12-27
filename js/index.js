@@ -41,9 +41,12 @@ adminLoginBtn.addEventListener("click",()=>{
 
 userLoginBtn.addEventListener("click",()=>{
     let username = stdUsername.value;
-   
-    console.log(username)
+    let password = stdPassword.value;
 
+    console.log(username)
+if(username !="" && password != ""){
+    window.location.href = "./main/exam.html";
+}
     stdUsername.value=""
     stdPassword.value=""
   

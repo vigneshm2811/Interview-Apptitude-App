@@ -1,0 +1,150 @@
+@import url(
+"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: rgb(236, 236, 236);
+}
+.btnSubmit{
+    padding: 0.6rem 0.8rem;
+    border-radius: 50px;
+    background-image: linear-gradient(to right,
+    rgb(255, 195, 110),
+    rgb(255, 146, 91));
+ font-weight: 500;
+ font-size: 20px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  
+  
+}
+
+.exam-container{
+    margin:130px 10%;
+    /* border: 1px solid; */
+    width: 65%;
+}
+.headingApp{
+    font-size: 42px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    padding:0 1.2rem;
+}
+.practice-question-block{
+    padding: 1rem 1.2rem;
+    margin-bottom: 0;
+}
+.question-no{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    color: gray;
+}
+.question-text{
+    font-size: 20px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 600;
+    margin: 10px 0px 24px;
+}
+
+.option-block{
+    border: 1px solid rgba(128, 128, 128, 0.548);
+    background-color: rgba(255, 255, 255, 0.767);
+    box-shadow: 0px 0px 8px 0 rgba(139, 138, 138, 0.829);
+    border-radius: 6px;
+    padding: 0.9rem;
+    text-align: center;
+    margin-bottom: 14px;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+}
+
+.option-block:hover{
+    box-shadow: none;
+    scale: 1.01;
+}
+.selected{
+    background-image: linear-gradient(to right,
+    rgb(255, 195, 110),
+    rgb(255, 146, 91));
+}
+
+
+
+
+/* pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: inline-block;
+    position: relative;
+  }
+  .index {
+    cursor: pointer;
+    display: inline;
+    margin-right: 29.5px;
+    padding: 5px;
+    user-select: none;
+    -moz-user-select: none;
+  }
+  .index:last-child {
+    margin: 0;
+  }
+  svg {
+    left: -13px;
+    position: absolute;
+    top: -11px;
+    transition: transform 500ms;
+    width: 46px;
+  }
+  path {
+    fill:none;
+    stroke:rgb(241, 106, 38);
+    stroke-dasharray: 150 150;
+    stroke-width:15;
+  }
+  .container.open:not(.flip) path {
+    animation: OpenRight 500ms;
+  }
+  .container.open.flip path {
+    animation: OpenLeft 500ms;
+  }
+  .container.i1 svg {
+    transform: translateX(0);
+  }
+  .container.i2 svg {
+    transform: translateX(50px);
+  }
+  .container.i3 svg {
+    transform: translateX(102px);
+  }
+  .container.i4 svg {
+    transform: translateX(154px);
+  }
+  .container.i5 svg {
+    transform: translateX(206px);
+  }
+  @keyframes OpenRight {
+    25% { stroke-dasharray: 100 150; }
+    60% { stroke-dasharray: 100 150; }
+    100% { stroke-dasharray: 150 150; }
+  }
+  @keyframes OpenLeft {
+    25% { stroke-dashoffset: -50px; }
+    60% { stroke-dashoffset: -50px; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  

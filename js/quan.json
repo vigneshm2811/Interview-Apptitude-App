@@ -1,0 +1,686 @@
+[
+    {
+      "id": 1,
+      "section": "quantitative",
+      "question": "What is the value of 3^4?",
+      "options": {
+        "A": "9",
+        "B": "27",
+        "C": "81",
+        "D": "64"
+      },
+      "correctAnswer": "81"
+    },
+    {
+      "id": 2,
+      "section": "quantitative",
+      "question": "If x + 5 = 12, what is the value of x?",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correctAnswer": "7"
+    },
+    {
+      "id": 3,
+      "section": "quantitative",
+      "question": "Simplify: 4 × (6 + 2) ÷ 2",
+      "options": {
+        "A": "12",
+        "B": "16",
+        "C": "20",
+        "D": "24"
+      },
+      "correctAnswer": "16"
+    },
+    {
+      "id": 4,
+      "section": "quantitative",
+      "question": "If the perimeter of a square is 20 cm, what is the length of one side?",
+      "options": {
+        "A": "4 cm",
+        "B": "5 cm",
+        "C": "6 cm",
+        "D": "8 cm"
+      },
+      "correctAnswer": "5 cm"
+    },
+    {
+      "id": 5,
+      "section": "quantitative",
+      "question": "Find the average of the numbers 12, 18, and 24.",
+      "options": {
+        "A": "15",
+        "B": "18",
+        "C": "20",
+        "D": "22"
+      },
+      "correctAnswer": "18"
+    },
+    {
+      "id": 6,
+      "section": "quantitative",
+      "question": "If a shirt costs $20 and is on sale for 25% off, what is the sale price?",
+      "options": {
+        "A": "$10",
+        "B": "$15",
+        "C": "$17.50",
+        "D": "$18.75"
+      },
+      "correctAnswer": "$15"
+    },
+    {
+      "id": 7,
+      "section": "quantitative",
+      "question": "Solve for x: 2x + 3 = 11",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correctAnswer": "4"
+    },
+    {
+      "id": 8,
+      "section": "quantitative",
+      "question": "If a train travels at 60 mph, how far will it travel in 2.5 hours?",
+      "options": {
+        "A": "120 miles",
+        "B": "150 miles",
+        "C": "160 miles",
+        "D": "180 miles"
+      },
+      "correctAnswer": "150 miles"
+    },
+    {
+      "id": 9,
+      "section": "quantitative",
+      "question": "The sum of two consecutive odd integers is 44. What are the integers?",
+      "options": {
+        "A": "21, 23",
+        "B": "23, 25",
+        "C": "25, 27",
+        "D": "27, 29"
+      },
+      "correctAnswer": "21, 23"
+    },
+    {
+      "id": 10,
+      "section": "quantitative",
+      "question": "If the area of a rectangle is 24 square units and its length is 6 units, what is its width?",
+      "options": {
+        "A": "2 units",
+        "B": "3 units",
+        "C": "4 units",
+        "D": "5 units"
+      },
+      "correctAnswer": "4 units"
+    },
+    {
+      "id": 11,
+      "section": "quantitative",
+      "question": "Express 25% as a decimal.",
+      "options": {
+        "A": "0.25",
+        "B": "0.5",
+        "C": "0.75",
+        "D": "1.25"
+      },
+      "correctAnswer": "0.25"
+    },
+    {
+      "id": 12,
+      "section": "quantitative",
+      "question": "If a car travels at a speed of 50 miles per hour, how long will it take to travel 200 miles?",
+      "options": {
+        "A": "2 hours",
+        "B": "3 hours",
+        "C": "4 hours",
+        "D": "5 hours"
+      },
+      "correctAnswer": "4 hours"
+    },
+    {
+      "id": 13,
+      "section": "quantitative",
+      "question": "What is the perimeter of a triangle with sides of length 8 cm, 15 cm, and 17 cm?",
+      "options": {
+        "A": "35 cm",
+        "B": "40 cm",
+        "C": "42 cm",
+        "D": "50 cm"
+      },
+      "correctAnswer": "40 cm"
+    },
+    {
+      "id": 14,
+      "section": "quantitative",
+      "question": "If a box contains 12 chocolates and you take 3 out, what percentage of the chocolates do you have?",
+      "options": {
+        "A": "15%",
+        "B": "20%",
+        "C": "25%",
+        "D": "30%"
+      },
+      "correctAnswer": "25%"
+    },
+    {
+      "id": 15,
+      "section": "quantitative",
+      "question": "Find the value of 5² - 3².",
+      "options": {
+        "A": "16",
+        "B": "20",
+        "C": "22",
+        "D": "26"
+      },
+      "correctAnswer": "16"
+    },
+    {
+      "id": 16,
+      "section": "quantitative",
+      "question": "If the sale tax rate is 8%, what is the total cost of an item priced at $75?",
+      "options": {
+        "A": "$75",
+        "B": "$80.50",
+        "C": "$81",
+        "D": "$82"
+      },
+      "correctAnswer": "$81"
+    },
+    {
+      "id": 17,
+      "section": "quantitative",
+      "question": "Solve for y: 2y - 5 = 11",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correctAnswer": "8"
+    },
+    {
+      "id": 18,
+      "section": "quantitative",
+      "question": "The hypotenuse of a right-angled triangle is 10 cm. If one leg is 6 cm, what is the length of the other leg?",
+      "options": {
+        "A": "8 cm",
+        "B": "9 cm",
+        "C": "9.8 cm",
+        "D": "10.2 cm"
+      },
+      "correctAnswer": "8 cm"
+    },
+    {
+      "id": 19,
+      "section": "quantitative",
+      "question": "A bookstore is offering a 20% discount on all books. If the original price of a book is $50, what is the discounted price?",
+      "options": {
+        "A": "$35",
+        "B": "$40",
+        "C": "$45",
+        "D": "$48"
+      },
+      "correctAnswer": "$40"
+    },
+    {
+      "id": 20,
+      "section": "quantitative",
+      "question": "If a rectangle has a length of 12 units and a width of 5 units, what is its area?",
+      "options": {
+        "A": "30 square units",
+        "B": "45 square units",
+        "C": "50 square units",
+        "D": "60 square units"
+      },
+      "correctAnswer": "60 square units"
+    },
+    {
+        "id": 21,
+        "section": "logical",
+        "question": "If all cats are mammals and Fluffy is a cat, is it true that Fluffy is a mammal?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 22,
+        "section": "logical",
+        "question": "If some roses are red and all red things are colorful, is it true that some roses are colorful?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 23,
+        "section": "logical",
+        "question": "If Jack is taller than Jill and Jill is taller than Tim, is it true that Jack is taller than Tim?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 24,
+        "section": "logical",
+        "question": "If no birds can fly underwater and some penguins are birds, is it true that no penguins can fly underwater?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 25,
+        "section": "logical",
+        "question": "If every student in the class passed the exam and Alice is a student, is it true that Alice passed the exam?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 26,
+        "section": "logical",
+        "question": "If some fruits are apples and some apples are red, is it true that some fruits are red?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 27,
+        "section": "logical",
+        "question": "If all squares are rectangles and some rectangles are blue, is it true that some squares are blue?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 28,
+        "section": "logical",
+        "question": "If no cars are bicycles and some bicycles are green, is it true that no cars are green?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 29,
+        "section": "logical",
+        "question": "If Bob is older than Mary and Mary is older than Joe, is it true that Bob is older than Joe?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 30,
+        "section": "logical",
+        "question": "If no mammals lay eggs and some reptiles lay eggs, is it true that no mammals are reptiles?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 31,
+        "section": "logical",
+        "question": "If it is raining, and Susan takes her umbrella, is it true that Susan is prepared for the rain?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 32,
+        "section": "logical",
+        "question": "If John likes ice cream and all people who like ice cream are happy, is it true that John is happy?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 33,
+        "section": "logical",
+        "question": "If no pencils are markers and some markers are red, is it true that no pencils are red?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 34,
+        "section": "logical",
+        "question": "If all triangles have three sides and some shapes have three sides, is it true that some shapes are triangles?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 35,
+        "section": "logical",
+        "question": "If no planets are stars and some stars are big, is it true that no planets are big?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 36,
+        "section": "logical",
+        "question": "If all clocks tell time and some devices tell time, is it true that some devices are clocks?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 37,
+        "section": "logical",
+        "question": "If no insects are mammals and some mammals are warm-blooded, is it true that no insects are warm-blooded?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 38,
+        "section": "logical",
+        "question": "If every circle is round and some squares are round, is it true that some squares are circles?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 39,
+        "section": "logical",
+        "question": "If it is winter and Jack has his coat, is it true that Jack is dressed for the season?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      {
+        "id": 40,
+        "section": "logical",
+        "question": "If no clouds are rocks and some rocks are heavy, is it true that no clouds are heavy?",
+        "options": {
+          "A": "True",
+          "B": "False"
+        },
+        "correctAnswer": "A"
+      },
+      
+        {
+          "id": 41,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: '___ cat is sitting on ___ windowsill.'",
+          "options": {
+            "A": "A, the",
+            "B": "An, the",
+            "C": "The, a",
+            "D": "An, a"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 42,
+          "section": "language",
+          "question": "Identify the correct noun form for the verb 'to celebrate':",
+          "options": {
+            "A": "Celebration",
+            "B": "Celebrated",
+            "C": "Celebrity",
+            "D": "Celebrating"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 43,
+          "section": "language",
+          "question": "Convert the following sentence to passive voice: 'The chef is cooking a delicious meal.'",
+          "options": {
+            "A": "A delicious meal is being cooked by the chef.",
+            "B": "A delicious meal has been cooked by the chef.",
+            "C": "A delicious meal was cooked by the chef.",
+            "D": "The chef has cooked a delicious meal."
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 44,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: 'I saw ___ eagle flying in ___ sky.'",
+          "options": {
+            "A": "An, the",
+            "B": "The, a",
+            "C": "A, the",
+            "D": "An, a"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 45,
+          "section": "language",
+          "question": "Identify the plural form of the noun 'child':",
+          "options": {
+            "A": "Childrens",
+            "B": "Childs",
+            "C": "Childes",
+            "D": "Children"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": 46,
+          "section": "language",
+          "question": "Convert the following sentence to active voice: 'The book was read by Mary.'",
+          "options": {
+            "A": "Mary had read the book.",
+            "B": "Mary is reading the book.",
+            "C": "Mary read the book.",
+            "D": "Mary will read the book."
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": 47,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: 'He bought ___ new car and ___ expensive house.'",
+          "options": {
+            "A": "A, a",
+            "B": "An, the",
+            "C": "The, an",
+            "D": "A, the"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 48,
+          "section": "language",
+          "question": "Identify the correct noun form for the verb 'to invent':",
+          "options": {
+            "A": "Inventor",
+            "B": "Invention",
+            "C": "Inventing",
+            "D": "Inventive"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": 49,
+          "section": "language",
+          "question": "Convert the following sentence to passive voice: 'The team won the championship.'",
+          "options": {
+            "A": "The championship was won by the team.",
+            "B": "The team has won the championship.",
+            "C": "The championship won the team.",
+            "D": "The team will win the championship."
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 50,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: 'She has ___ apple and ___ orange in her bag.'",
+          "options": {
+            "A": "An, the",
+            "B": "The, a",
+            "C": "A, the",
+            "D": "An, a"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": 51,
+          "section": "language",
+          "question": "Identify the plural form of the noun 'mouse':",
+          "options": {
+            "A": "Mice",
+            "B": "Mouses",
+            "C": "Micees",
+            "D": "Mousen"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 52,
+          "section": "language",
+          "question": "Convert the following sentence to active voice: 'The song was sung by the choir.'",
+          "options": {
+            "A": "The choir sung the song.",
+            "B": "The choir is singing the song.",
+            "C": "The choir sings the song.",
+            "D": "The choir will sing the song."
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": 53,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: 'I saw ___ interesting movie and ___ beautiful painting.'",
+          "options": {
+            "A": "An, a",
+            "B": "The, an",
+            "C": "A, the",
+            "D": "An, the"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 54,
+          "section": "language",
+          "question": "Identify the correct noun form for the verb 'to confuse':",
+          "options": {
+            "A": "Confuser",
+            "B": "Confusion",
+            "C": "Confusing",
+            "D": "Confused"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": 55,
+          "section": "language",
+          "question": "Convert the following sentence to passive voice: 'The teacher teaches the students.'",
+          "options": {
+            "A": "The students were taught by the teacher.",
+            "B": "The teacher taught the students.",
+            "C": "The students teach the teacher.",
+            "D": "The teacher will teach the students."
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 56,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: 'She bought ___ umbrella and ___ hat.'",
+          "options": {
+            "A": "An, a",
+            "B": "A, the",
+            "C": "The, an",
+            "D": "An, the"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": 57,
+          "section": "language",
+          "question": "Identify the plural form of the noun 'goose':",
+          "options": {
+            "A": "Goose",
+            "B": "Geese",
+            "C": "Geeses",
+            "D": "Gosse"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": 58,
+          "section": "language",
+          "question": "Convert the following sentence to active voice: 'The letter was written by John.'",
+          "options": {
+            "A": "John wrote the letter.",
+            "B": "John is writing the letter.",
+            "C": "John writes the letter.",
+            "D": "John will write the letter."
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": 59,
+          "section": "language",
+          "question": "Choose the correct article for the following sentence: 'He has ___ apple and ___ orange in his lunch.'",
+          "options": {
+            "A": "An, the",
+            "B": "A, the",
+            "C": "The, an",
+            "D": "An, the"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": 60,
+          "section": "language",
+          "question": "Identify the correct noun form for the verb 'to inform':",
+          "options": {
+            "A": "Informer",
+            "B": "Informant",
+            "C": "Information",
+            "D": "Informee"
+          },
+          "correctAnswer": "C"
+        }
+      
+      
+  ]
+  
