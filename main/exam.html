@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exam</title>
     <link rel="stylesheet" href="../styles/exam.css">
+    <link rel="stylesheet" href="../styles/modal.css">
     <link rel="stylesheet" href="../styles/navbar.css">
 </head>
 
@@ -14,11 +15,11 @@
         <nav>
             <a href="#" class="logo">App.<span>TEST</span><a>
                     <ul id="navmenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Rules</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./rules.html">Rules</a></li>
                         <!-- <li><a href="#">Blogs</a></li> -->
                         <i class="fa-solid fa-xmark" id="icon-remove" onclick="closeMenu()"></i>
-                        <li><button href="#" class="btnSubmit">Submit</button></li>
+                        <li><button href="#" class="btnSubmit" onclick="window.dialog.showModal();">Submit</button></li>
                     </ul>
                     <div class="hamburger"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
         </nav>
@@ -42,52 +43,56 @@
       </div>
       
        
+  
      <div class="pagination">
-        <div class="container">
-            <span><div class="index" >1</div><div class="index">2</div><div class="index" >3</div></span>
-            <svg viewBox="0 0 100 100">
-              <path
-                    d="m 7.1428558,49.999998 c -1e-7,-23.669348 19.1877962,-42.8571447 42.8571442,-42.8571446 23.669347,0 42.857144,19.1877966 42.857144,42.8571446" />
-            </svg>
-            <svg viewBox="0 0 100 100">
-              <path
-                    d="m 7.1428558,49.999998 c -1e-7,23.669347 19.1877962,42.857144 42.8571442,42.857144 23.669347,0 42.857144,-19.187797 42.857144,-42.857144" />
-            </svg>
-          </div>
-     </div>
+    
+         <div class="btn-paginacao">
+             <ul id="page-ul">
+               <!-- <li><label for="paginacao1">1</label></li>
+               <li><label for="paginacao2">2</label></li>
+               <li><label for="paginacao3">3</label></li>
+               <li><label for="paginacao4">4</label></li> -->
+             </ul>
+           </div>
     </div>
 
-    <script src="../js/quan.json" ></script>
+    </div>
+    
+<dialog id="dialog">
+	<h2>Congrats</h2>
+	score will be shown here
+	<button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
+</dialog>
     <script src="../js/exam.js"></script>
+    <!-- <script src="../js/new.js"></script> -->
     <script>
       
-        const selectedOptions = [];
+   
+//   let questionsDiv = document.getElementById("questionsDiv")
+//   questionsDiv.addEventListener('click', function (event) {
+//             a=event
+//             // Check if the clicked element is an option-block
+//             if (event.target.classList.contains('option-block')) {
+//                 console.log(event)
+//                 // Find the parent question block
+//                 const questionBlock = event.target.closest('.practice-question-block');
 
-  let a;
-        document.addEventListener('click', function (event) {
-            a=event
-            // Check if the clicked element is an option-block
-            if (event.target.classList.contains('option-block')) {
-                console.log(event)
-                // Find the parent question block
-                const questionBlock = event.target.closest('.practice-question-block');
+//                 // Remove the 'selected' class from all options within the parent question block
+//                 questionBlock.querySelectorAll('.option-block').forEach(option => {
+//                     option.classList.remove('selected');
+//                 });
 
-                // Remove the 'selected' class from all options within the parent question block
-                questionBlock.querySelectorAll('.option-block').forEach(option => {
-                    option.classList.remove('selected');
-                });
+//                 // Add the 'selected' class to the clicked option
+//                 event.target.classList.add('selected');
 
-                // Add the 'selected' class to the clicked option
-                event.target.classList.add('selected');
+//                 // Store the selected option value in the variable for the specific question
+//                 const questionNumber = questionBlock.querySelector('.question-no').textContent;
+//                 selectedOptions[questionNumber] = event.target.textContent;
 
-                // Store the selected option value in the variable for the specific question
-                const questionNumber = questionBlock.querySelector('.question-no').textContent;
-                selectedOptions[questionNumber] = event.target.textContent;
-
-                // You can perform additional actions based on the selected option if needed
-                console.log(`Selected Option for ${questionNumber}:`, selectedOptions[questionNumber]);
-            }
-        });
+//                 // You can perform additional actions based on the selected option if needed
+//                 console.log(`Selected Option for ${questionNumber}:`, selectedOptions[questionNumber]);
+//             }
+//         });
     </script>
 
 </body>

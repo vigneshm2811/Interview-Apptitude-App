@@ -45,7 +45,8 @@ userLoginBtn.addEventListener("click",()=>{
 
     console.log(username)
 if(username !="" && password != ""){
-    window.location.href = "./main/exam.html";
+    window.location.href = "./main/rules.html";
+    localStorage.setItem("username",username);
 }
     stdUsername.value=""
     stdPassword.value=""

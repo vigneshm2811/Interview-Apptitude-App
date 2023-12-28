@@ -1,31 +1,38 @@
+let questionsDiv = document.getElementById("questionsDiv");
+let currentPage = 1;
+const questionsPerPage = 10;
+const selectedOptions = [];
 
-let questionsDiv = document.getElementById("questionsDiv")
-
+let a;
 
 fetch('../js/quan.json')
   .then(response => response.json())
   .then(data => {
     // Work with the loaded data
-    console.log(data)
-//    let datas= data.slice(0,10)
-   questionRender(quanPage(data))
+    console.log(data);
+
+    // console.log(logicalPage(data));
+    //mergging all filtered arrays 
+
+    let mergedArray = [...quanPage(data), ...logicalPage(data), ...verbalPage(data)];
+    console.log(mergedArray)
   
-   logicalPage(data)
-   verbalPage(data)
-  })
-//   .catch(error => {
-//     console.error('Error loading JSON file:', error);
-//   });
+    renderQuestions(mergedArray, currentPage);
 
+    // Add pagination controls
+    addPagination(mergedArray);
+  });
 
+function renderQuestions(data, page) {
+  questionsDiv.innerHTML = "";
+  const startIndex = (page - 1) * questionsPerPage;
+  const endIndex = startIndex + questionsPerPage;
 
-  function questionRender(data){
-    let count=0;
-    data.forEach(element => {
-        count=count+1
-        console.log(Object.keys(element.options).length)
-       if(Object.keys(element.options).length === 2){
-        questionsDiv.innerHTML += `<div class=" practice-question-block">
+  for (let i = startIndex; i < endIndex && i < data.length; i++) {
+    const element = data[i];
+    let count = i + 1;
+    if (Object.keys(element.options).length === 2) {
+      questionsDiv.innerHTML += `<div class=" practice-question-block">
         <div class="question-no">Question ${count}</div>
         <div class="question-text">
            ${element.question}
@@ -33,12 +40,10 @@ fetch('../js/quan.json')
         <div class="options-group">
             <div class="option-block ">${element.options.A}</div>
             <div class="option-block ">${element.options.B}</div>
-          
         </div>
-    </div>`
-       }
-      else{
-        questionsDiv.innerHTML += `<div class=" practice-question-block">
+      </div>`;
+    } else {
+      questionsDiv.innerHTML += `<div class=" practice-question-block">
         <div class="question-no">Question ${count}</div>
         <div class="question-text">
            ${element.question}
@@ -49,52 +54,101 @@ fetch('../js/quan.json')
             <div class="option-block ">${element.options.C}</div>
             <div class="option-block ">${element.options.D}</div>
         </div>
-    </div>`
-      }
-        
-    });
+      </div>`;
+    }
   }
-// filter belongs to quantative section
+}
+
+questionsDiv.addEventListener('click', function (event) {
+    a=event
+    // Check if the clicked element is an option-block
+    if (event.target.classList.contains('option-block')) {
+        console.log(event)
+        // Find the parent question block
+        const questionBlock = event.target.closest('.practice-question-block');
+
+        // Remove the 'selected' class from all options within the parent question block
+        questionBlock.querySelectorAll('.option-block').forEach(option => {
+            option.classList.remove('selected');
+        });
+
+        // Add the 'selected' class to the clicked option
+        event.target.classList.add('selected');
+
+        // Store the selected option value in the variable for the specific question
+        const questionNumber = questionBlock.querySelector('.question-no').textContent;
+        selectedOptions[questionNumber] = event.target.textContent;
+
+        // You can perform additional actions based on the selected option if needed
+        console.log(`Selected Option for ${questionNumber}:`, selectedOptions[questionNumber]);
+    }
+});
+
+
 function quanPage(data){
-    let quanData = data.filter((e)=>{
+    let filteredData = data.filter((e)=>{
         return e.section === "quantitative"
     })
-    return quanData
+    return filteredData.slice(0,10)
 }
 
 // filter belongs to logical section
 function logicalPage(data){
-    let quanData = data.filter((e)=>{
+    let filteredData = data.filter((e)=>{
         return e.section === "logical"
     })
-    return quanData
+    return filteredData.slice(0,10)
 }
 
 // filter belongs to verbal section
 function verbalPage(data){
-    let quanData = data.filter((e)=>{
+    let filteredData = data.filter((e)=>{
         return e.section === "language"
     })
-   return quanData
+   return filteredData.slice(0,10)
 }
-//   pagination
-// document.getElementById("sec1").addEventListener("click",questionRender(quanPage()))
-// document.getElementById("sec2").addEventListener("click",questionRender(logicalPage()))
-// document.getElementById("sec3").addEventListener("click", questionRender(verbalPage()))
-const c = document.querySelector('.container')
-const indexs = Array.from(document.querySelectorAll('.index'))
-let cur = -1
-indexs.forEach((index, i) => {
-  index.addEventListener('click', (e) => {
-    // clear
-    c.className = 'container'
-    void c.offsetWidth; // Reflow
-    c.classList.add('open')
-    c.classList.add(`i${i + 1}`)
-    if (cur > i) {
-      c.classList.add('flip')
-    }
-    cur = i
-  })
-})
 
+//pagination function
+function addPagination(data) {
+  const totalPages = Math.ceil(data.length / questionsPerPage);
+  const paginationDiv = document.querySelector(".btn-paginacao");
+
+//   paginationDiv.innerHTML = `<div class="container">${generatePageNumbers(totalPages)}</div>`;
+let a= generatePageNumbers(totalPages)
+  paginationDiv.innerHTML += `<div class="container">${generatePageNumbers(totalPages)}</div>`;
+//   document.body.appendChild(paginationDiv);
+
+  const pageButtons = document.querySelectorAll(".index");
+  pageButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        let headingApp = document.querySelector(".headingApp");
+      currentPage = parseInt(button.textContent);
+      switch(currentPage){
+        case 1:
+            headingApp.innerHTML ="Quantitative Aptitude";
+            break;
+        case 2:
+            headingApp.innerHTML ="logical Aptitude";
+            break;
+        case 3:
+            headingApp.innerHTML ="Verbal Aptitude";
+            break;
+        default:
+            headingApp.innerHTML ="Quantitative Aptitude";
+            break;
+        
+      }
+      renderQuestions(data, currentPage);
+    });
+  });
+}
+
+function generatePageNumbers(totalPages) {
+  let pageNumbers = "";
+  for (let i = 1; i <= totalPages; i++) {
+    pageNumbers += `<span class="index">${i}</span>`;
+  }
+  return pageNumbers;
+}
+
+// filtering accroding to the section of the data

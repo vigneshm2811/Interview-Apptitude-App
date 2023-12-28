@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/rules.css">
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <a href="#" class="logo">App.<span>TEST</span><a>
+                    <ul id="navmenu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <i class="fa-solid fa-xmark" id="icon-remove" onclick="closeMenu()"></i>
+                    </ul>
+                    <div class="hamburger"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
+        </nav>
+    </header>
+
+    <!-- <div class="container mt-5">
+            <div class="row">
+         <div class="col-md-6 bg-Colors">
+
+            
+         </div> -->
+    <div class="rules-container">
+        <div class="left-rules-div bg-Colors">
+            <img src="../assets/image/Online test-amico.png" alt="">
+        </div>
+
+
+        <div class="right-rules-div">
+            <h1 class="title-main">Welcome <span id="user-name" class="gradient-text"></span></h1>
+
+            <h2 class="title-sub">The journey to land your <br> dream job is just <span class="gradient-text">ONE
+                    TEST </span>away
+            </h2>
+
+            <!-- <ul class="course-list">
+                <li class="features">Quantitative Aptitude</li>
+                <li class="features">logical Aptitude</li>
+                <li class="features">Verbal Aptitude</li> 
+            </ul> -->
+            
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Sections</th>
+            <th>Questions</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Quantitative Aptitude</td>
+            <td>10</td>
+           
+        </tr>
+        <tr>
+            <td>logical Aptitude</td>
+            <td>10</td>
+           
+        </tr>
+        <tr>
+            <td>Verbal Aptitude</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Duration</td>
+            <td>10 mins</td>
+        </tr>
+       
+        <tbody>
+    </table>
+</div>
+<button class="clkbtn" id="startTest">Start Test</button>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+    const startTest = document.getElementById("startTest");
+    const userName = document.getElementById("user-name")
+    userName.textContent=  localStorage.getItem("username");
+    startTest.addEventListener("click",()=>{
+        window.location.href="./exam.html"
+    })
+</script>
+
+    <!-- <script src="./js/index.js"></script> -->
+</body>
+
+</html>

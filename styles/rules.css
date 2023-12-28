@@ -23,10 +23,25 @@ body {
     background-color: rgb(231, 231, 231);
 }
  
+.clkbtn {
+    margin:0 40%;
+    height: 60px;
+    width: 150px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #fa6b29 0%, #fab726 100%);
+    font-size: 22px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.clkbtn:hover {
+scale: 1.01;
+    box-shadow: 0px 0px 7px 0 rgb(241, 113, 8);
+  }
 
 
-
-.login-container{
+.rules-container{
     display: flex;
     margin: 0 10%;
     margin-top: 130px;
@@ -36,138 +51,105 @@ body {
     rgb(255, 146, 91));*/
     box-shadow: 8px 8px 20px rgb(128, 128, 128); 
 }
-.left-login-div, .right-login-div{
+.left-rules-div, .right-rules-div{
     width: 50%;
 }
-.left-login-div img{
-    width:100%;
+.left-rules-div img{
+    padding: 2rem;
+    width: 95%;
+    height: 100%;
 }
  .bg-Colors{
     background-image: linear-gradient(to right,
     rgba(247, 206, 148, 0.87),
     rgba(248, 170, 131, 0.829));
  }
-
- 
-.containers {
-    height: 700px;
-    width:100%;
-    /* width: 500px; */
-    background-color: white;
-   
-    position: relative;
-    overflow: hidden;
+.right-rules-div{
+    padding: 1.5rem;
 }
-.slider-div{
-    margin-top: 80px;
+ 
+ .title-sub {
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 400;
     margin-bottom: 0;
+    margin: 22px auto;
 }
-.btn {
-    height: 60px;
-    width: 325px;
-    margin: 20px auto;
-    box-shadow: 10px 10px 30px rgb(254, 215, 188);
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.title-main{
+    font-size: 36px;
+    font-weight: 700;
 }
- 
-.login,
-.signup {
+
+.gradient-text {
+    font-size: 38px;
+    font-weight: 600;
+    background: linear-gradient(to right, #ff5100 0%, #f1b739 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.course-list {
+    padding: 0;
+  
+    text-align: left;
+    /* font-weight: 600; */
     font-size: 24px;
+
+}
+.course-list li{
+    list-style: none;
+}
+
+
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    margin-top: 50px;
+    border-radius: 5px;
+    /* font-size: 20px; */
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
     text-align: center;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    position: relative;
-    cursor: pointer;
+    padding: 8px;
 }
- 
-.slider {
-    height: 60px;
-    width: 166px;
-    border-radius: 50px;
-    background-image: linear-gradient(to right,
-            rgb(255, 195, 110),
-            rgb(255, 146, 91));
-    position: absolute;
-    top: 80px;
-    left: 220px;
-    transition: all 0.5s ease-in-out;
-}
- 
-.moveslider {
-    left: 380px;
-}
- 
-.form-section {
-    height: 500px;
-   
-    padding: 20px 0;
-    display: flex;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    left: 0;
-}
- 
-.form-section-move {
-    left:-600px;
-}
- 
-.user-login,
-.admin-login {
-    height: 100%;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 40px;
-   
-}
- 
-.user-login {
-    gap: 50px;
-    margin: 0 18%;
-}
- 
-.admin-login {
-    margin: 0 ;
-    gap: 50px;
-}
- .admin-login p{
-    color:  rgb(245, 106, 37);
- }
-.inputs {
-    height: 70px;
-    width: 400px;
-    outline: none;
-    border: none;
-    color: rgb(77, 77, 77);
-    background-color: rgb(240, 240, 240);
-    border-radius: 50px;
-    padding-left: 30px;
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
     font-size: 20px;
 }
- 
-.clkbtn {
-    height: 60px;
-    width: 150px;
-    border-radius: 50px;
-    background-image: linear-gradient(to right,
-    rgb(255, 195, 110),
-    rgb(255, 146, 91));
-    font-size: 22px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.5s ease;
+
+.fl-table thead th {
+    /* color: #ffffff; */
+    background: #eeb842;
+    font-size: 24px;
+    font-weight: 500;
 }
-.clkbtn:hover {
-    letter-spacing: 3px;
-    box-shadow: 0px 0px 7px 0 rgb(241, 113, 8);
-  }
- 
+
+
+.fl-table thead th:nth-child(odd) {
+    /* font-weight: 400; */
+    /* color: #ffffff; */
+    background:#fc7d42;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+
+
 /* For Responsiveness of the page */
  
 @media screen and (max-width: 650px) {
