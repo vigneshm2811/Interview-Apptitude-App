@@ -1,97 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="../styles/admin.css">
-    <link rel="stylesheet" href="../styles/navbar.css">
- 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+	<link rel="stylesheet" href="../styles/admin.css">
+	<link rel="stylesheet" href="../styles/navbar.css">
+	<link rel="stylesheet" href="../styles/modal.css">
+
 
 </head>
+
 <body>
-    
-    <header>
-        <nav>
-            <a href="#" class="logo">App.<span>TEST</span><a>
-                    <ul id="navmenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <i class="fa-solid fa-xmark" id="icon-remove" onclick="closeMenu()"></i>
-                    </ul>
-                    <div class="hamburger"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
-        </nav>
-    </header>
-   
-    <div class="admin-container">
-        <h1 class="title-main">Welcome <span  class="gradient-text">ADMIN</span></h1>
-        <div id="chartContainer" ></div>
 
-    </div>
+	<header>
+		<nav>
+			<a href="#" class="logo">App.<span>TEST</span><a>
+					<ul id="navmenu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Blogs</a></li>
+						<li><a href="#">Contact</a></li>
+						<i class="fa-solid fa-xmark" id="icon-remove" onclick="closeMenu()"></i>
+					</ul>
+					<div class="hamburger"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
+		</nav>
+	</header>
 
-    <script>
-window.onload = function () {
+	<div class="admin-container">
+		<h1 class="title-main">Welcome <span class="gradient-text">ADMIN</span></h1>
 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	theme: "light2", // "light1", "light2", "dark1", "dark2"
-	title: {
-		text: "Scores of the User"
-	},
-	axisY: {
-		title: "Scores (in %)",
-		suffix: "%"
-	},
-	axisX: {
-		title: "Sections"
-	},
-	data: [{
-		type: "column",
-		yValueFormatString: "#,##0.0#\"%\"",
-		dataPoints: [
-			{ label: "Quantative", y: 100 },	
-			{ label: "Logical", y: 90 },	
-			{ label: "Verbal", y: 50}
-		]
-	}]
-});
-chart.render();
+		<div class="admin-operations">
 
-}
+			<div class="admin-buttons">
+				<div>
+					<button class="cssbuttons-io-button" id="createBtn">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z"></path>
+							<path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+						</svg>
+						<span>Create</span>
+					</button>
+				</div>
+				<div>
+					<button class="cssbuttons-io-button" id="modifyBtn">
+						<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+							viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+							<path
+								d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z" />
+						</svg>
+						</svg>
+						<span>Modify</span>
+					</button>
+				</div>
+				<div>
+					<button class="cssbuttons-io-button" id="reportBtn">
+						<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 576 512">
+							<path
+								d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z" />
+						</svg> <span>Report</span>
+					</button>
+				</div>
 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	exportEnabled: true,
-	theme: "light1", // "light1", "light2", "dark1", "dark2"
-	title:{
-		text: "Simple Column Chart with Index Labels"
-	},
-  	axisY: {
-      includeZero: true
-    },
-	data: [{
-		type: "column", //change type to bar, line, area, pie, etc
-		//indexLabel: "{y}", //Shows y value on all Data Points
-		indexLabelFontColor: "#5A5757",
-      	indexLabelFontSize: 16,
-		indexLabelPlacement: "outside",
-		dataPoints: [
-			{ x: 10, y: 71 },
-			{ x: 20, y: 55 },
-			{ x: 30, y: 50 },
-			{ x: 40, y: 65 },
-		
-		
-		]
-	}]
-});
-chart.render();
+			</div>
+			<!-- <img src="../assets/image/Data report-pana.png" alt="" class="img"> -->
 
 
-</script>
-<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+		</div>
+		<div id="createModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" id="createClose">&times;</span>
+				</div>
+
+				<h2>Add New Question</h2>
+
+				<div class="create-inputs">
+					<label for="">Enter the Question</label>
+
+					<input placeholder="Question Number" class="input-style" type="number">
+					<label for="">Select the Section</label>
+
+					<select name="Sections" id="section">
+						<option value="quantative">Quantative</option>
+						<option value="logical">Logical</option>
+						<option value="verbal">Verbal</option>
+					</select>
+					<label for="textarea">Enter the Question</label>
+					<textarea required="" cols="50" rows="4" id="textarea" name="textarea"
+						placeholder="Question"></textarea>
+
+					<label for="">Enter your Options</label>
+					<div class="input-options">
+
+						<input placeholder="option-1" class="input-style" type="text">
+						<input placeholder="option-2" class="input-style" type="text">
+						<input placeholder="option-3" class="input-style" type="text">
+						<input placeholder="option-4" class="input-style" type="text">
+					</div>
+					<label for="">Enter the correct answer</label>
+
+					<input placeholder="Correct answer" class="input-style" type="text">
+
+					<button class="cssbuttons-io-button" id="addBtn">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z"></path>
+							<path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+						</svg>
+						<span>Add</span>
+					</button>
+
+				</div>
+
+
+			</div>
+
+		</div>
+		<div id="modifyModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" id="modifyClose">&times;</span>
+					<h2>Modify</h2>
+				</div>
+				<div class="create-inputs">
+					<label for="textarea">Enter the Duration of test</label>
+					<input placeholder="Duration in min" class="input-style" type="number">
+
+					<label for="">select the Section</label>
+					<div>
+						<input type="checkbox" id="vehicle1" name="vehicle1" value="Quantative">
+						<label for="vehicle1">Quantative</label> <input type="checkbox" id="vehicle1" name="vehicle1"
+							value="logical">
+						<label for="vehicle1"> logical</label>
+						<input type="checkbox" id="vehicle1" name="vehicle1" value="verbal">
+						<label for="vehicle1"> verbal</label>
+					</div>
+					<label for="textarea">Enter the No of Attempts</label>
+					<input placeholder="Attempts" class="input-style" type="number">
+					<label for="textarea">No.of Questions per section</label>
+					<input placeholder="No.of Questions" class="input-style" type="number">
+
+					<button class="cssbuttons-io-button" id="doneBtn">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+							<path fill="none" d="M0 0h24v24H0z"></path>
+							<path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+						</svg>
+						<span>Done</span>
+					</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="reportModal" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close" id="reportClose">&times;</span>
+					<h2>Scores and Report of the Student</h2>
+				</div>
+
+
+
+
+				<div class="containers">
+
+					<!-- upper button section to sinputsct
+								the login or signup form -->
+					<div class="slider-div">
+						<div class="slider"></div>
+						<div class="btn">
+							<button class="marks">Marks</button>
+							<button class="graph">Graph</button>
+						</div>
+					</div>
+
+					<div class="form-section">
+
+
+						<div class="user-login">
+							<div class="table-wrapper">
+								<table class="fl-table">
+									<thead>
+										<tr>
+											<th>Sections</th>
+											<th>Max Marks</th>
+											<th>Marks</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Quantitative Aptitude</td>
+											<td>10</td>
+											<td>5</td>
+
+										</tr>
+										<tr>
+											<td>logical Aptitude</td>
+											<td>10</td>
+											<td>5</td>
+										</tr>
+										<tr>
+											<td>Verbal Aptitude</td>
+											<td>10</td>
+											<td>10</td>
+										</tr>
+										<tr>
+											<td>Total Marks </td>
+											<td>30</td>
+											<td>20</td>
+										</tr>
+
+									<tbody>
+								</table>
+							</div>
+						</div>
+
+
+						<div class="admin-login">
+
+							<div id="chartContainer"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+	<script>
+		window.onload = function () {
+
+			var chart = new CanvasJS.Chart("chartContainer", {
+				animationEnabled: true,
+				theme: "light2", // "light1", "light2", "dark1", "dark2"
+				title: {
+					text: "Scores of the User"
+				},
+				axisY: {
+					title: "Scores (in %)",
+					suffix: "%"
+				},
+				axisX: {
+					title: "Sections"
+				},
+				data: [{
+					type: "column",
+					yValueFormatString: "#,##0.0#\"%\"",
+					dataPoints: [
+						{ label: "Quantative", y: 100 },
+						{ label: "Logical", y: 90 },
+						{ label: "Verbal", y: 50 }
+					]
+				}]
+			});
+			chart.render();
+
+		}
+
+
+
+
+	</script>
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+	<script src="../js/admin.js"></script>
+	<script src="../js/update.js"></script>
+	<!-- <script src="../js/index.js"></cript> -->
 
 </body>
+
 </html>
