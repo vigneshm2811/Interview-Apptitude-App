@@ -1,27 +1,40 @@
-// Step 1: Retrieve the existing JSON array from local storage
-var storedJsonString = localStorage.getItem('myjson');
 
-// Step 2: Parse the JSON string into a JavaScript array
-var existingArray = JSON.parse(storedJsonString);
+let storedJsonString = localStorage.getItem('myjson');
+let existingData = JSON.parse(storedJsonString);
+// const addBtn = document.getElementById("addBtn");
 
-// Step 3: Push the new value to the array
-var newValue = {
-  "id": 61,
-  "section": "math",
-  "question": "What is 2 + 2?",
-  "options": {
-    "A": "3",
-    "B": "4",
-    "C": "5",
-    "D": "6"
-  },
-  "correctAnswer": "B"
-};
+addBtn.addEventListener("click", createQuestion)
 
-existingArray.push(newValue);
+function createQuestion(){
+  let id= document.getElementById("qno").value
+  let section= document.getElementById("section").value
+  let questions= document.getElementById("textarea").value
 
-// Step 4: Convert the updated array back to a JSON string
-var updatedJsonString = JSON.stringify(existingArray);
+  let op1= document.getElementById("op1").value
+  let op2= document.getElementById("op2").value
+  let op3= document.getElementById("op3").value
+  let op4= document.getElementById("op4").value
+  let correct = document.getElementById("correct").value
 
-// Step 5: Store the updated JSON string back in local storage
-localStorage.setItem('myjson', updatedJsonString);
+  let newValue = {
+    "id": id,
+    "section": section,
+    "question": questions,
+    "options": {
+      "A": op1,
+      "B": op2,
+      "C": op3,
+      "D": op4
+    },
+    "correctAnswer": correct
+  };
+  
+  existingData.push(newValue);
+  
+  let updatedJsonString = JSON.stringify(existingData);
+  
+  localStorage.setItem('myjson', updatedJsonString);
+  
+}
+
+

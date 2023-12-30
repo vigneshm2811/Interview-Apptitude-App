@@ -81,7 +81,7 @@
 				<div class="create-inputs">
 					<label for="">Enter the Question</label>
 
-					<input placeholder="Question Number" class="input-style" type="number">
+					<input placeholder="Question Number" class="input-style" type="number" id="qno">
 					<label for="">Select the Section</label>
 
 					<select name="Sections" id="section">
@@ -91,25 +91,22 @@
 					</select>
 					<label for="textarea">Enter the Question</label>
 					<textarea required="" cols="50" rows="4" id="textarea" name="textarea"
-						placeholder="Question"></textarea>
+						placeholder="Question" ></textarea>
 
 					<label for="">Enter your Options</label>
 					<div class="input-options">
 
-						<input placeholder="option-1" class="input-style" type="text">
-						<input placeholder="option-2" class="input-style" type="text">
-						<input placeholder="option-3" class="input-style" type="text">
-						<input placeholder="option-4" class="input-style" type="text">
+						<input placeholder="option-1" class="input-style" type="text" id="op1">
+						<input placeholder="option-2" class="input-style" type="text" id="op2">
+						<input placeholder="option-3" class="input-style" type="text" id="op3">
+						<input placeholder="option-4" class="input-style" type="text" id="op4">
 					</div>
 					<label for="">Enter the correct answer</label>
 
-					<input placeholder="Correct answer" class="input-style" type="text">
+					<input placeholder="Correct answer" class="input-style" type="text" id="correct">
 
 					<button class="cssbuttons-io-button" id="addBtn">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-							<path fill="none" d="M0 0h24v24H0z"></path>
-							<path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
-						</svg>
+						
 						<span>Add</span>
 					</button>
 

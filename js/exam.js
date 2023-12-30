@@ -5,23 +5,31 @@ const selectedOptions = [];
 
 let a;
 
-fetch('../js/quan.json')
-  .then(response => response.json())
-  .then(data => {
-    // Work with the loaded data
-    console.log(data);
+// fetch('../js/quan.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     var jsonData = data;
+// var jsonString = JSON.stringify(jsonData);
 
-    // console.log(logicalPage(data));
-    //mergging all filtered arrays 
+//     localStorage.setItem('myjson',jsonString)
+//     // console.log(data);
+//     renderLocalStorage()
+//   });
+  renderLocalStorage()
 
-    let mergedArray = [...quanPage(data), ...logicalPage(data), ...verbalPage(data)];
-    console.log(mergedArray)
-  
-    renderQuestions(mergedArray, currentPage);
+function renderLocalStorage(){
+    
+  let storedJsonString = localStorage.getItem('myjson');
+  let localData = JSON.parse(storedJsonString);
 
-    // Add pagination controls
-    addPagination(mergedArray);
-  });
+  let mergedArray = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
+  console.log(mergedArray)
+  renderQuestions(mergedArray, currentPage);
+  addPagination(mergedArray);
+}
+
+
+
 
 function renderQuestions(data, page) {
   questionsDiv.innerHTML = "";
