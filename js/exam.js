@@ -149,3 +149,5 @@ function generatePageNumbers(totalPages) {
 }
 
 // filtering accroding to the section of the data
+
+
