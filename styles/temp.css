@@ -63,13 +63,13 @@ body {
     margin-bottom: 0;
 }
 .btn {
-    /* height: 60px; */
-    width: 50%;
+    height: 60px;
+    width: 325px;
     margin: 20px auto;
     box-shadow: 10px 10px 30px rgb(254, 215, 188);
     border-radius: 50px;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-around;
     align-items: center;
 }
  
@@ -80,20 +80,10 @@ body {
     border: none;
     outline: none;
     background-color: transparent;
-    border-radius: 50px;
-    width: 50%;
+    position: relative;
     cursor: pointer;
-    padding: 1rem;
-    /* border: 1px solid; */
 }
  
- .bg{
-    background: linear-gradient(to right,
-    rgb(255, 195, 110),
-    rgb(255, 146, 91));
-    transition: 0.5s ease-in-out;
-
- }
 .slider {
     height: 60px;
     width: 166px;

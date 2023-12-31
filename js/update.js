@@ -3,6 +3,17 @@ let storedJsonString = localStorage.getItem('myjson');
 let existingData = JSON.parse(storedJsonString);
 // const addBtn = document.getElementById("addBtn");
 
+fetch('../js/quan.json')
+  .then(response => response.json())
+  .then(data => {
+    var jsonData = data;
+var jsonString = JSON.stringify(jsonData);
+
+    localStorage.setItem('myjson',jsonString)
+    console.log(data);
+    
+  });
+
 addBtn.addEventListener("click", createQuestion)
 
 function createQuestion(){

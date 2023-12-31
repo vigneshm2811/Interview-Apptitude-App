@@ -1,6 +1,6 @@
 
-let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
+let admin = document.querySelector("#admin");
+let user = document.querySelector("#user");
 let slider = document.querySelector(".slider");
 let formSection = document.querySelector(".form-section");
 
@@ -14,14 +14,21 @@ const adminLoginBtn = document.getElementById("adminLoginBtn");
 
 
 let adminAuth =document.getElementById("admin-login-p")
- 
-signup.addEventListener("click", () => {
-    slider.classList.add("moveslider");
+user.classList.add("bg")
+
+admin.addEventListener("click", () => {
+    admin.classList.add("bg");
+    user.classList.remove("bg")
+    // slider.classList.add("moveslider");
     formSection.classList.add("form-section-move");
+    
 });
  
-login.addEventListener("click", () => {
-    slider.classList.remove("moveslider");
+user.addEventListener("click", () => {
+    // slider.classList.remove("moveslider");
+    admin.classList.remove("bg");
+    user.classList.add("bg")
+
     formSection.classList.remove("form-section-move");
 });
 

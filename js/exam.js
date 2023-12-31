@@ -3,20 +3,8 @@ let currentPage = 1;
 const questionsPerPage = 10;
 const selectedOptions = [];
 
-let a;
 
-// fetch('../js/quan.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     var jsonData = data;
-// var jsonString = JSON.stringify(jsonData);
-
-//     localStorage.setItem('myjson',jsonString)
-//     // console.log(data);
-//     renderLocalStorage()
-//   });
   renderLocalStorage()
-
 function renderLocalStorage(){
     
   let storedJsonString = localStorage.getItem('myjson');
@@ -97,7 +85,7 @@ function quanPage(data){
     let filteredData = data.filter((e)=>{
         return e.section === "quantitative"
     })
-    return filteredData.slice(0,10)
+    return filteredData.slice(5,12)
 }
 
 // filter belongs to logical section
@@ -105,7 +93,7 @@ function logicalPage(data){
     let filteredData = data.filter((e)=>{
         return e.section === "logical"
     })
-    return filteredData.slice(0,10)
+    return filteredData.slice(5,10)
 }
 
 // filter belongs to verbal section
@@ -113,7 +101,7 @@ function verbalPage(data){
     let filteredData = data.filter((e)=>{
         return e.section === "language"
     })
-   return filteredData.slice(0,10)
+   return filteredData.slice(5,10)
 }
 
 //pagination function
@@ -128,7 +116,8 @@ let a= generatePageNumbers(totalPages)
 
   const pageButtons = document.querySelectorAll(".index");
   pageButtons.forEach(button => {
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
         let headingApp = document.querySelector(".headingApp");
       currentPage = parseInt(button.textContent);
       switch(currentPage){
