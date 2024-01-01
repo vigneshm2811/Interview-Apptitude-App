@@ -3,12 +3,41 @@ let currentPage = 1;
 const questionsPerPage = 10;
 const selectedOptions = [];
 
+let maxtime = 3;
+document.getElementById("minutes").innerHTML = maxtime;
 
+let secCountdown = setInterval(secCounter,1000)
+let minCountdown = setInterval(minCounter,60000)
+
+let sec=60;
+function minCounter(){
+  maxtime-=1;
+  if(maxtime === 0){
+  clearInterval(minCountdown)
+  clearInterval(secCountdown)
+   }
+  console.log(maxtime)
+  document.getElementById("minutes").innerHTML = maxtime;
+
+ }
+function secCounter(){
+ sec-=1;
+//  console.log(sec)
+ document.getElementById("seconds").innerHTML = sec;
+  if(sec === 0){
+   sec=59;
+  }
+}
+
+
+
+ 
+  let storedJsonString = localStorage.getItem('myjson');
+  let localData = JSON.parse(storedJsonString);
   renderLocalStorage()
 function renderLocalStorage(){
     
-  let storedJsonString = localStorage.getItem('myjson');
-  let localData = JSON.parse(storedJsonString);
+
 
   let mergedArray = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
   console.log(mergedArray)
@@ -77,6 +106,10 @@ questionsDiv.addEventListener('click', function (event) {
 
         // You can perform additional actions based on the selected option if needed
         console.log(`Selected Option for ${questionNumber}:`, selectedOptions[questionNumber]);
+
+        const data = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
+        // const score = calculateScore(data, selectedOptions[questionNumber]);
+        // console.log(`Current Score: ${score}`);
     }
 });
 
@@ -151,3 +184,23 @@ function generatePageNumbers(totalPages) {
 // filtering accroding to the section of the data
 
 
+
+
+// Function to calculate the score
+// function calculateScore(data, selectedOptions) {
+//   let score = 0;
+
+//   data.forEach((question, index) => {
+//     const questionNumber = index + 1;
+//     const selectedOption = selectedOptions;
+//     console.log(selectedOption)
+//     const correctOption = question.correctAnswer;
+//     console.log(correctOption)
+
+//     if (selectedOption === correctOption) {
+//       score++;
+//     }
+//   });
+
+//   return score;
+// }
