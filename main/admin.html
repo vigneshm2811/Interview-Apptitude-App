@@ -18,7 +18,7 @@
 		<nav>
 			<a href="#" class="logo">App.<span>TEST</span><a>
 					<ul id="navmenu">
-						<li><a href="#">Home</a></li>
+						<li><a href="../index.html">Home</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="#">Blogs</a></li>
 						<li><a href="#">Contact</a></li>
@@ -125,10 +125,14 @@
 					<h2>Modify</h2>
 				</div>
 				<div class="create-inputs">
-					<label for="textarea">Enter the Duration of test</label>
-					<input placeholder="Duration in min" class="input-style" type="number">
+					<label for="textarea">Enter the Duration of test (5 to 30)</label>
+					<input placeholder="Duration in min" class="input-style" type="number" min="5" max="30" id="minutes">
+					<label for="textarea">Min Pass Percentage (30 to 100)</label>
+					<input placeholder="Min pass %" class="input-style" type="number" min="30" max="100" id="passPercent">
+					<label for="textarea">Marks per question (1 to 5)</label>
+					<input placeholder="Marks per question" class="input-style" type="number" min="1" max="5" id="marksPerQuestion">
 
-					<label for="">select the Section</label>
+					<!-- <label for="">select the Section</label>
 					<div>
 						<input type="checkbox" id="vehicle1" name="vehicle1" value="Quantative">
 						<label for="vehicle1">Quantative</label> <input type="checkbox" id="vehicle1" name="vehicle1"
@@ -136,11 +140,11 @@
 						<label for="vehicle1"> logical</label>
 						<input type="checkbox" id="vehicle1" name="vehicle1" value="verbal">
 						<label for="vehicle1"> verbal</label>
-					</div>
-					<label for="textarea">Enter the No of Attempts</label>
-					<input placeholder="Attempts" class="input-style" type="number">
-					<label for="textarea">No.of Questions per section</label>
-					<input placeholder="No.of Questions" class="input-style" type="number">
+					</div> -->
+					<label for="textarea">Enter the No of Attempts (1 to 3)</label>
+					<input placeholder="Attempts" class="input-style" type="number" min="1" max="3" id="attempts">
+					<label for="textarea">No.of Questions per section (5 to 20)</label>
+					<input placeholder="No.of Questions" class="input-style" type="number" min="5" max="20" id="noOfquestion">
 
 					<button class="cssbuttons-io-button" id="doneBtn">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -162,7 +166,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<span class="close" id="reportClose">&times;</span>
-					<h2>Scores and Report of the Student</h2>
+					<h2>Scores and Report of <span id="user" class="gradient-text"></span></h2>
 				</div>
 
 
@@ -197,26 +201,27 @@
 										<tr>
 											<td>Quantitative Aptitude</td>
 											<td>10</td>
-											<td>5</td>
-
+											<td id="quanMarks">5</td>
+				
 										</tr>
 										<tr>
 											<td>logical Aptitude</td>
 											<td>10</td>
-											<td>5</td>
+											<td id="logicMarks">5</td>
 										</tr>
 										<tr>
 											<td>Verbal Aptitude</td>
 											<td>10</td>
-											<td>10</td>
+											<td id="verbalMarks">10</td>
 										</tr>
 										<tr>
 											<td>Total Marks </td>
 											<td>30</td>
-											<td>20</td>
+											<td id="totalMarks"></td>
 										</tr>
-
-									<tbody>
+				
+									</tbody>
+				
 								</table>
 							</div>
 						</div>
@@ -235,43 +240,13 @@
 
 
 	</div>
-	<script>
-		window.onload = function () {
-
-			var chart = new CanvasJS.Chart("chartContainer", {
-				animationEnabled: true,
-				theme: "light2", // "light1", "light2", "dark1", "dark2"
-				title: {
-					text: "Scores of the User"
-				},
-				axisY: {
-					title: "Scores (in %)",
-					suffix: "%"
-				},
-				axisX: {
-					title: "Sections"
-				},
-				data: [{
-					type: "column",
-					yValueFormatString: "#,##0.0#\"%\"",
-					dataPoints: [
-						{ label: "Quantative", y: 100 },
-						{ label: "Logical", y: 90 },
-						{ label: "Verbal", y: 50 }
-					]
-				}]
-			});
-			chart.render();
-
-		}
-
-
-
-
-	</script>
+	
 	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 	<script src="../js/admin.js"></script>
 	<script src="../js/update.js"></script>
+	<script src="../js/report.js"></script>
+	<script src="../js/modify.js"></script>
+
 	<!-- <script src="../js/index.js"></cript> -->
 
 </body>

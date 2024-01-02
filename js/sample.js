@@ -1,69 +1,88 @@
 let questionsDiv = document.getElementById("questionsDiv");
+let questionsDiv2 = document.getElementById("questionsDiv2");
+let questionsDiv3 = document.getElementById("questionsDiv3");
 let currentPage = 1;
 const questionsPerPage = 10;
 const selectedOptions = [];
 
-let a;
+let maxtime = 3;
+document.getElementById("minutes").innerHTML = maxtime;
 
-fetch('../js/quan.json')
-  .then(response => response.json())
-  .then(data => {
-    var jsonData = data;
-var jsonString = JSON.stringify(jsonData);
+let secCountdown = setInterval(secCounter,1000)
+let minCountdown = setInterval(minCounter,60000)
 
-    localStorage.setItem('myjson',jsonString)
-    // console.log(data);
-    renderLocalStorage()
-  });
-function renderLocalStorage(){
-    
-  let storedJsonString = localStorage.getItem('myjson');
-  let localData = JSON.parse(storedJsonString);
+let sec=60;
+function minCounter(){
+  maxtime-=1;
+  if(maxtime === 0){
+  clearInterval(minCountdown)
+  clearInterval(secCountdown)
+   }
+  console.log(maxtime)
+  document.getElementById("minutes").innerHTML = maxtime;
 
-  let mergedArray = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
-  console.log(mergedArray)
-  renderQuestions(mergedArray, currentPage);
-  addPagination(mergedArray);
+ }
+function secCounter(){
+ sec-=1;
+//  console.log(sec)
+ document.getElementById("seconds").innerHTML = sec;
+  if(sec === 0){
+   sec=59;
+  }
 }
 
 
 
-function renderQuestions(data, page) {
-  const startIndex = (page - 1) * questionsPerPage;
-  const endIndex = startIndex + questionsPerPage;
-  sliderContainer.innerHTML = "";
-    for (let i = startIndex; i < endIndex && i < data.length; i++) {
-        const element = data[i];}
+ 
+  let storedJsonString = localStorage.getItem('myjson');
+  let localData = JSON.parse(storedJsonString);
+  renderLocalStorage()
 
-  for (let i = startIndex; i < endIndex && i < data.length; i++) {
-    const element = data[i];
-    let count = i + 1;
-    if (Object.keys(element.options).length === 2) {
-      questionsDiv.innerHTML += `<div class=" practice-question-block">
-        <div class="question-no">Question ${count}</div>
-        <div class="question-text">
-           ${element.question}
-        </div>
-        <div class="options-group">
-            <div class="option-block ">${element.options.A}</div>
-            <div class="option-block ">${element.options.B}</div>
-        </div>
-      </div>`;
-    } else {
-      questionsDiv.innerHTML += `<div class=" practice-question-block">
-        <div class="question-no">Question ${count}</div>
-        <div class="question-text">
-           ${element.question}
-        </div>
-        <div class="options-group">
-            <div class="option-block ">${element.options.A}</div>
-            <div class="option-block ">${element.options.B}</div>
-            <div class="option-block ">${element.options.C}</div>
-            <div class="option-block ">${element.options.D}</div>
-        </div>
-      </div>`;
-    }
+function renderLocalStorage(){
+  let mergedArray = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
+  console.log(mergedArray)
+  renderQuestions(quanPage(localData), questionsDiv);
+  renderQuestions(logicalPage(localData), questionsDiv2);
+  renderQuestions(verbalPage(localData), questionsDiv3);
+  // addPagination(mergedArray);
+}
+
+
+
+function renderQuestions(data, div) {
+  div.innerHTML = "";
+  // const startIndex = (page - 1) * questionsPerPage;
+  // const endIndex = startIndex + questionsPerPage;
+  let count=0;
+data.forEach((element)=>{
+   count +=1;
+  if (Object.keys(element.options).length === 2) {
+    div.innerHTML += `<div class=" practice-question-block">
+      <div class="question-no">Question ${count}</div>
+      <div class="question-text">
+         ${element.question}
+      </div>
+      <div class="options-group">
+          <div class="option-block ">${element.options.A}</div>
+          <div class="option-block ">${element.options.B}</div>
+      </div>
+    </div>`;
+  } else {
+    div.innerHTML += `<div class=" practice-question-block">
+      <div class="question-no">Question ${count}</div>
+      <div class="question-text">
+         ${element.question}
+      </div>
+      <div class="options-group">
+          <div class="option-block ">${element.options.A}</div>
+          <div class="option-block ">${element.options.B}</div>
+          <div class="option-block ">${element.options.C}</div>
+          <div class="option-block ">${element.options.D}</div>
+      </div>
+    </div>`;
   }
+})
+ 
 }
 
 questionsDiv.addEventListener('click', function (event) {
@@ -88,6 +107,10 @@ questionsDiv.addEventListener('click', function (event) {
 
         // You can perform additional actions based on the selected option if needed
         console.log(`Selected Option for ${questionNumber}:`, selectedOptions[questionNumber]);
+
+        const data = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
+        // const score = calculateScore(data, selectedOptions[questionNumber]);
+        // console.log(`Current Score: ${score}`);
     }
 });
 
@@ -115,94 +138,3 @@ function verbalPage(data){
    return filteredData.slice(0,10)
 }
 
-
-
-
-
-const sliderContainer = document.getElementById("slider-container");
-let currentSlide = 0;
-
-// function renderQuestions(data, page) {
-//     // Existing code remains unchanged
-
-//     // Instead of updating questionsDiv.innerHTML, update the slider container
-//     sliderContainer.innerHTML = "";
-//     for (let i = startIndex; i < endIndex && i < data.length; i++) {
-//         const element = data[i];
-//         // ... (same rendering logic as before)
-//     }
-// }
-
-// function addPagination(data) {
-//     // Existing code remains unchanged
-
-//     // Instead of updating paginationDiv.innerHTML, update the slider container
-//     paginationDiv.innerHTML = `<div class="container">${generatePageNumbers(totalPages)}</div>`;
-
-//     const pageButtons = document.querySelectorAll(".index");
-//     pageButtons.forEach(button => {
-//         button.addEventListener("click", function (event) {
-//             event.preventDefault();
-//             let headingApp = document.querySelector(".headingApp");
-//             currentSlide = parseInt(button.textContent) - 1;
-//             switch(currentSlide){
-//                 // ... (same switch logic as before)
-//             }
-//             renderQuestions(data, currentSlide + 1);
-//             updateSliderPosition();
-//         });
-//     });
-// }
-function addPagination(data) {
-  const totalPages = Math.ceil(data.length / questionsPerPage);
-  const paginationDiv = document.querySelector(".btn-paginacao");
-
-//   paginationDiv.innerHTML = `<div class="container">${generatePageNumbers(totalPages)}</div>`;
-
-paginationDiv.innerHTML = `<div class="container">${generatePageNumbers(totalPages)}</div>`;
-//   document.body.appendChild(paginationDiv);
-
-  const pageButtons = document.querySelectorAll(".index");
-  pageButtons.forEach(button => {
-    button.addEventListener("click", function (event) {
-      event.preventDefault();
-        let headingApp = document.querySelector(".headingApp");
-        currentSlide = parseInt(button.textContent) - 1;
-        switch(currentPage){
-        case 1:
-            headingApp.innerHTML ="Quantitative Aptitude";
-            break;
-        case 2:
-            headingApp.innerHTML ="logical Aptitude";
-            break;
-        case 3:
-            headingApp.innerHTML ="Verbal Aptitude";
-            break;
-        default:
-            headingApp.innerHTML ="Quantitative Aptitude";
-            break;
-        
-      }
-      renderQuestions(data, currentSlide + 1);
-      updateSliderPosition();
-    });
-  });
-}
-function updateSliderPosition() {
-    const slideWidth = sliderContainer.clientWidth;
-    sliderContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-}
-
-function nextSlide() {
-    if (currentSlide < totalPages - 1) {
-        currentSlide++;
-        updateSliderPosition();
-    }
-}
-
-function prevSlide() {
-    if (currentSlide > 0) {
-        currentSlide--;
-        updateSliderPosition();
-    }
-}

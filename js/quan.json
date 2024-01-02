@@ -239,207 +239,250 @@
       },
       "correctAnswer": "60 square units"
     },
-    {
-        "id": 21,
-        "section": "logical",
-        "question": "If all cats are mammals and Fluffy is a cat, is it true that Fluffy is a mammal?",
-        "options": {
-          "A": "True",
-          "B": "False"
+    
+   
+        {
+          "id": 21,
+          "section": "logical",
+          "question": "Look at this series: 7, 14, 21, ____, 35",
+          "options": {
+            "A": "24",
+            "B": "28",
+            "C": "30",
+            "D": "42"
+          },
+          "correctAnswer": "28"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 22,
-        "section": "logical",
-        "question": "If some roses are red and all red things are colorful, is it true that some roses are colorful?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 22,
+          "section": "logical",
+          "question": "Choose the word that does not belong: circle, square, triangle, ____, rectangle",
+          "options": {
+            "A": "hexagon",
+            "B": "pentagon",
+            "C": "octagon",
+            "D": "triangle"
+          },
+          "correctAnswer": "D"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 23,
-        "section": "logical",
-        "question": "If Jack is taller than Jill and Jill is taller than Tim, is it true that Jack is taller than Tim?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 23,
+          "section": "logical",
+          "question": "Find the missing number in the series: 4, 9, 16, ____, 36",
+          "options": {
+            "A": "20",
+            "B": "24",
+            "C": "25",
+            "D": "30"
+          },
+          "correctAnswer": "25"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 24,
-        "section": "logical",
-        "question": "If no birds can fly underwater and some penguins are birds, is it true that no penguins can fly underwater?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 24,
+          "section": "logical",
+          "question": "Choose the word that does not belong: winter, spring, summer, ____, autumn",
+          "options": {
+            "A": "fall",
+            "B": "monsoon",
+            "C": "winter",
+            "D": "spring"
+          },
+          "correctAnswer": "B"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 25,
-        "section": "logical",
-        "question": "If every student in the class passed the exam and Alice is a student, is it true that Alice passed the exam?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 25,
+          "section": "logical",
+          "question": "Look at this series: 6, 12, 18, ____, 30",
+          "options": {
+            "A": "24",
+            "B": "25",
+            "C": "27",
+            "D": "36"
+          },
+          "correctAnswer": "24"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 26,
-        "section": "logical",
-        "question": "If some fruits are apples and some apples are red, is it true that some fruits are red?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 26,
+          "section": "logical",
+          "question": "Choose the word that does not belong: mercury, venus, mars, ____, jupiter",
+          "options": {
+            "A": "earth",
+            "B": "neptune",
+            "C": "saturn",
+            "D": "mars"
+          },
+          "correctAnswer": "A"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 27,
-        "section": "logical",
-        "question": "If all squares are rectangles and some rectangles are blue, is it true that some squares are blue?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 27,
+          "section": "logical",
+          "question": "Find the missing number in the series: 1, 4, 9, ____, 25",
+          "options": {
+            "A": "12",
+            "B": "15",
+            "C": "16",
+            "D": "18"
+          },
+          "correctAnswer": "16"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 28,
-        "section": "logical",
-        "question": "If no cars are bicycles and some bicycles are green, is it true that no cars are green?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 28,
+          "section": "logical",
+          "question": "Choose the word that does not belong: tiger, lion, leopard, ____, elephant",
+          "options": {
+            "A": "cheetah",
+            "B": "giraffe",
+            "C": "panther",
+            "D": "leopard"
+          },
+          "correctAnswer": "B"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 29,
-        "section": "logical",
-        "question": "If Bob is older than Mary and Mary is older than Joe, is it true that Bob is older than Joe?",
-        "options": {
-          "A": "True",
-          "B": "False"
+        {
+          "id": 29,
+          "section": "logical",
+          "question": "Look at this series: 10, 20, 30, ____, 50",
+          "options": {
+            "A": "35",
+            "B": "40",
+            "C": "45",
+            "D": "55"
+          },
+          "correctAnswer": "40"
         },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 30,
-        "section": "logical",
-        "question": "If no mammals lay eggs and some reptiles lay eggs, is it true that no mammals are reptiles?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 31,
-        "section": "logical",
-        "question": "If it is raining, and Susan takes her umbrella, is it true that Susan is prepared for the rain?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 32,
-        "section": "logical",
-        "question": "If John likes ice cream and all people who like ice cream are happy, is it true that John is happy?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 33,
-        "section": "logical",
-        "question": "If no pencils are markers and some markers are red, is it true that no pencils are red?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 34,
-        "section": "logical",
-        "question": "If all triangles have three sides and some shapes have three sides, is it true that some shapes are triangles?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 35,
-        "section": "logical",
-        "question": "If no planets are stars and some stars are big, is it true that no planets are big?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 36,
-        "section": "logical",
-        "question": "If all clocks tell time and some devices tell time, is it true that some devices are clocks?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 37,
-        "section": "logical",
-        "question": "If no insects are mammals and some mammals are warm-blooded, is it true that no insects are warm-blooded?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 38,
-        "section": "logical",
-        "question": "If every circle is round and some squares are round, is it true that some squares are circles?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 39,
-        "section": "logical",
-        "question": "If it is winter and Jack has his coat, is it true that Jack is dressed for the season?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      {
-        "id": 40,
-        "section": "logical",
-        "question": "If no clouds are rocks and some rocks are heavy, is it true that no clouds are heavy?",
-        "options": {
-          "A": "True",
-          "B": "False"
-        },
-        "correctAnswer": "A"
-      },
-      
+    
+   {
+    "id": 30,
+    "section": "logical",
+    "question": "Look at this series: XYZ, ABC, DEF, ____, GHI",
+    "options": {
+      "A": "JKL",
+      "B": "MNO",
+      "C": "PQR",
+      "D": "STU"
+    },
+    "correctAnswer": "JKL"
+  },
+  {
+    "id": 31,
+    "section": "logical",
+    "question": "Find the missing number in the series: 2, 6, 12, ____, 30",
+    "options": {
+      "A": "16",
+      "B": "18",
+      "C": "20",
+      "D": "24"
+    },
+    "correctAnswer": "20"
+  },
+  {
+    "id": 32,
+    "section": "logical",
+    "question": "Choose the word that does not belong: rose, tulip, daisy, ____, sunflower",
+    "options": {
+      "A": "lily",
+      "B": "carnation",
+      "C": "daffodil",
+      "D": "tulip"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": 33,
+    "section": "logical",
+    "question": "Look at this series: 8, 16, 24, ____, 40",
+    "options": {
+      "A": "30",
+      "B": "32",
+      "C": "36",
+      "D": "48"
+    },
+    "correctAnswer": "32"
+  },
+  {
+    "id": 34,
+    "section": "logical",
+    "question": "Choose the word that does not belong: piano, guitar, flute, ____, trumpet",
+    "options": {
+      "A": "violin",
+      "B": "drums",
+      "C": "saxophone",
+      "D": "flute"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 35,
+    "section": "logical",
+    "question": "Find the missing number in the series: 5, 10, ____, 20, 25",
+    "options": {
+      "A": "12",
+      "B": "15",
+      "C": "18",
+      "D": "22"
+    },
+    "correctAnswer": "15"
+  },
+  {
+    "id": 36,
+    "section": "logical",
+    "question": "Choose the word that does not belong: chair, table, sofa, ____, refrigerator",
+    "options": {
+      "A": "bed",
+      "B": "lamp",
+      "C": "bookshelf",
+      "D": "sofa"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": 37,
+    "section": "logical",
+    "question": "Find the missing number in the series: 3, 9, ____, 27, 81",
+    "options": {
+      "A": "15",
+      "B": "18",
+      "C": "21",
+      "D": "24"
+    },
+    "correctAnswer": "18"
+  },
+  {
+    "id": 38,
+    "section": "logical",
+    "question": "Choose the word that does not belong: moon, stars, sun, ____, comet",
+    "options": {
+      "A": "galaxy",
+      "B": "planet",
+      "C": "asteroid",
+      "D": "sun"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 39,
+    "section": "logical",
+    "question": "Look at this series: 4, 8, 12, ____, 20",
+    "options": {
+      "A": "14",
+      "B": "15",
+      "C": "16",
+      "D": "18"
+    },
+    "correctAnswer": "16"
+  },
+  {
+    "id": 40,
+    "section": "logical",
+    "question": "Choose the word that does not belong: ocean, river, lake, ____, mountain",
+    "options": {
+      "A": "stream",
+      "B": "pond",
+      "C": "forest",
+      "D": "lake"
+    },
+    "correctAnswer": "C"
+  },
+    
         {
           "id": 41,
           "section": "language",

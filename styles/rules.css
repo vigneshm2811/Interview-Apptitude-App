@@ -103,12 +103,12 @@ scale: 1.01;
 
 
 .table-wrapper{
-    margin: 10px 70px 70px;
+    margin: 10px 60px 60px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }
 
 .fl-table {
-    margin-top: 50px;
+    margin-top: 45px;
     border-radius: 5px;
     /* font-size: 20px; */
     font-weight: normal;
@@ -122,7 +122,7 @@ scale: 1.01;
 
 .fl-table td, .fl-table th {
     text-align: center;
-    padding: 8px;
+    padding: 6px;
 }
 
 .fl-table td {

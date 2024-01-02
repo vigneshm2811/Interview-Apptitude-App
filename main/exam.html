@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>exam</title>
+    <title>Exam</title>
     <link rel="stylesheet" href="../styles/exam.css">
     <link rel="stylesheet" href="../styles/modal.css">
     <link rel="stylesheet" href="../styles/navbar.css">
@@ -20,7 +20,7 @@
                         <li><a href="./rules.html">Rules</a></li>
                         <!-- <li><a href="#">Blogs</a></li> -->
                         <i class="fa-solid fa-xmark" id="icon-remove" onclick="closeMenu()"></i>
-                        <li><button href="#" class="btnSubmit" onclick="window.dialog.showModal();">Submit</button></li>
+                        <li><button href="#" class="btnSubmit" id="submit">Submit</button></li>
                     </ul>
                     <div class="hamburger"><i class="fa-solid fa-bars" onclick="openMenu()"></i></div>
         </nav>
@@ -28,81 +28,177 @@
 
     <div class="exam-container">
         <h1 class="headingApp">Quantitative Aptitude</h1>
-      <div id="questionsDiv">
-        <!-- <div class=" practice-question-block">
-            <div class="question-no">Question 4</div>
-            <div class="question-text">
-                If log1087.5 = 1.9421, then the number of digits in (875)10 is?
-            </div>
-            <div class="options-group">
-                <div class="option-block ">0</div>
-                <div class="option-block ">-1</div>
-                <div class="option-block ">1</div>
-                <div class="option-block ">2</div>
-            </div>
-        </div> -->
-      </div>
+      <!-- <div id="questionsDiv">
+       
+      </div> -->
+      
+    <div id="carousel-container">
+        <div id="slides">
+          <div class="slide">      
+            <div id="questionsDiv" >
+            <!-- <div class=" practice-question-block">
+                <div class="question-no">Question 4</div>
+                <div class="question-text">
+                    If log1087.5 = 1.9421, then the number of digits in (875)10 is?
+                </div>
+                <div class="options-group">
+                    <div class="option-block ">0</div>
+                    <div class="option-block ">-1</div>
+                    <div class="option-block ">1</div>
+                    <div class="option-block ">2</div>
+                </div>
+            </div> -->
+          </div>
+        </div>
+          <div class="slide" >  <div id="questionsDiv2" >
+            <!-- <div class=" practice-question-block">
+                <div class="question-no">Question 4</div>
+                <div class="question-text">
+                    If log1087.5 = 1.9421, then the number of digits in (875)10 is?
+                </div>
+                <div class="options-group">
+                    <div class="option-block ">0</div>
+                    <div class="option-block ">-1</div>
+                    <div class="option-block ">1</div>
+                    <div class="option-block ">2</div>
+                </div>
+            </div> -->
+          </div></div>
+          <div class="slide">  <div id="questionsDiv3">
+            <!-- <div class=" practice-question-block">
+                <div class="question-no">Question 4</div>
+                <div class="question-text">
+                    If log1087.5 = 1.9421, then the number of digits in (875)10 is?
+                </div>
+                <div class="options-group">
+                    <div class="option-block ">0</div>
+                    <div class="option-block ">-1</div>
+                    <div class="option-block ">1</div>
+                    <div class="option-block ">2</div>
+                </div>
+            </div> -->
+          </div></div>
+        </div>
       
        
   
-     <div class="pagination">
+     <!-- <div class="pagination">
     
          <div class="btn-paginacao">
              <ul id="page-ul">
               
              </ul>
            </div>
+    </div> -->
+
+      
+      
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide(1)">1</span>
+          <span class="dot" onclick="currentSlide(2)">2</span>
+          <span class="dot" onclick="currentSlide(3)">3</span>
+        </div>
+      </div>
+      
+
     </div>
 
-    <div class="pagination-slider">
-        <div class="slider-container" id="slider-container">
+    <div id="modifyModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="modifyClose">&times;</span>
+                <h2 >Congrats <span id="user" class="gradient-text">user</span></h2>
+            </div>
+            <div class="table-wrapper">
+                <table class="fl-table">
+                    <thead>
+                        <tr>
+                            <th>Sections</th>
+                            <th>Max Marks</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Quantitative Aptitude</td>
+                            <td>10</td>
+                            <td id="quanMarks">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>logical Aptitude</td>
+                            <td>10</td>
+                            <td id="logicMarks">5</td>
+                        </tr>
+                        <tr>
+                            <td>Verbal Aptitude</td>
+                            <td>10</td>
+                            <td id="verbalMarks">10</td>
+                        </tr>
+                        <tr>
+                            <td>Total Marks </td>
+                            <td>30</td>
+                            <td id="totalMarks"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-        <div class="slider-controls">
-            <button class="prev-btn" onclick="prevSlide()">Previous</button>
-            <button class="next-btn" onclick="nextSlide()">Next</button>
-        </div>
+
     </div>
     
 
-    </div>
     
-<dialog id="dialog">
-	<h2>Congrats</h2>
-	score will be shown here
-	<button onclick="window.dialog.close();" aria-label="close" class="x">❌</button>
-</dialog>
+    <script>
+        let slideIndex = 1;
+      
+        function showSlides(index) {
+          const slides = document.getElementById('slides');
+          const slidesCount = document.querySelectorAll('.slide').length;
+            let headingApp =document.querySelector(".headingApp")
+          switch(index){
+            case 1:
+                headingApp.textContent = "Quantitative Aptitude"
+                break;
+            
+            case 2:
+                headingApp.textContent = "Logical Aptitude"
+                break;
+            
+            case 3:
+                headingApp.textContent = "Verbal Aptitude"
+                break;
+            
+          }
+      
+          if (index > slidesCount) {
+            slideIndex = 1;
+          } else if (index < 1) {
+            slideIndex = slidesCount;
+          }
+      
+          const translateValue = -100 * (slideIndex - 1) + '%';
+          slides.style.transform = 'translateX(' + translateValue + ')';
+        }
+      
+        function changeSlide(n) {
+          showSlides(slideIndex += n);
+        }
+      
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+      
+      
+      </script>
+    
+
     <script src="../js/exam.js"></script>
     <!-- <script src="../js/sample.js"></script> -->
-    <script>
-      
-   
-//   let questionsDiv = document.getElementById("questionsDiv")
-//   questionsDiv.addEventListener('click', function (event) {
-//             a=event
-//             // Check if the clicked element is an option-block
-//             if (event.target.classList.contains('option-block')) {
-//                 console.log(event)
-//                 // Find the parent question block
-//                 const questionBlock = event.target.closest('.practice-question-block');
-
-//                 // Remove the 'selected' class from all options within the parent question block
-//                 questionBlock.querySelectorAll('.option-block').forEach(option => {
-//                     option.classList.remove('selected');
-//                 });
-
-//                 // Add the 'selected' class to the clicked option
-//                 event.target.classList.add('selected');
-
-//                 // Store the selected option value in the variable for the specific question
-//                 const questionNumber = questionBlock.querySelector('.question-no').textContent;
-//                 selectedOptions[questionNumber] = event.target.textContent;
-
-//                 // You can perform additional actions based on the selected option if needed
-//                 console.log(`Selected Option for ${questionNumber}:`, selectedOptions[questionNumber]);
-//             }
-//         });
-    </script>
-
 </body>
 
 </html>

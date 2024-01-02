@@ -62,21 +62,25 @@
         <tbody>
         <tr>
             <td>Quantitative Aptitude</td>
-            <td>10</td>
+            <td class="noOfquestion"></td>
            
         </tr>
         <tr>
             <td>logical Aptitude</td>
-            <td>10</td>
+            <td class="noOfquestion"></td>
            
         </tr>
         <tr>
             <td>Verbal Aptitude</td>
-            <td>10</td>
+            <td class="noOfquestion"></td>
+        </tr>
+        <tr>
+            <td>No of Attempts</td>
+            <td id="attempts"></td>
         </tr>
         <tr>
             <td>Duration</td>
-            <td>10 mins</td>
+            <td><span id="mins"></span> mins</td>
         </tr>
        
         <tbody>
@@ -88,18 +92,7 @@
 
 
 
-
-
-<script>
-    const startTest = document.getElementById("startTest");
-    const userName = document.getElementById("user-name")
-    userName.textContent=  localStorage.getItem("username");
-    startTest.addEventListener("click",()=>{
-        window.location.href="./exam.html"
-    })
-</script>
-
-    <!-- <script src="./js/index.js"></script> -->
+    <script src="../js/rules.js"></script>
 </body>
 
 </html>
