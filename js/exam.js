@@ -7,46 +7,7 @@ let currentPage = 1;
 const questionsPerPage = 10;
 const selectedOptions = [];
 
-let rulesData = localStorage.getItem('examRules')
-let examRules = JSON.parse(rulesData)
 
-let maxtime = examRules.minutes - 1 ;
-// let maxtime = 1-1;
-document.getElementById("minutes").innerHTML =leadingZero(maxtime);
-
-let secCountdown = setInterval(secCounter,1000)
-let minCountdown = setInterval(minCounter,60000)
-
-let sec=60;
-function leadingZero(value){
-  if(value<10){
-    value ="0"+value;
-  }
-  else{
-    value=value
-  }
-  return value
-}
-function minCounter(){
-  if(maxtime !=0 && maxtime>0){
-    maxtime-=1;
-  }
-  if(maxtime === 0){
-    clearInterval(secCountdown)
-  clearInterval(minCountdown)
-   }
-  console.log(maxtime)
-  document.getElementById("minutes").innerHTML = leadingZero(maxtime);
-
- }
-function secCounter(){
- sec-=1;
-//  console.log(sec)
- document.getElementById("seconds").innerHTML = leadingZero(sec);
-  if(sec === 0){
-   sec=59;
-  }
-}
 
 
 
@@ -204,3 +165,45 @@ user.textContent = username
   modifyModal.style.display = "block";
 })
 
+
+
+// slider 
+
+let slideIndex = 1;
+      
+function showSlides(index) {
+  const slides = document.getElementById('slides');
+  const slidesCount = document.querySelectorAll('.slide').length;
+    let headingApp =document.querySelector(".headingApp")
+  switch(index){
+    case 1:
+        headingApp.textContent = "Quantitative Aptitude"
+        break;
+    
+    case 2:
+        headingApp.textContent = "Logical Aptitude"
+        break;
+    
+    case 3:
+        headingApp.textContent = "Verbal Aptitude"
+        break;
+    
+  }
+
+  if (index > slidesCount) {
+    slideIndex = 1;
+  } else if (index < 1) {
+    slideIndex = slidesCount;
+  }
+
+  const translateValue = -100 * (slideIndex - 1) + '%';
+  slides.style.transform = 'translateX(' + translateValue + ')';
+}
+
+function changeSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}

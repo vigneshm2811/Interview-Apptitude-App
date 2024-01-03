@@ -40,12 +40,17 @@ let graph = document.querySelector(".graph");
 let marks = document.querySelector(".marks");
 let slider = document.querySelector(".slider");
 let formSection = document.querySelector(".form-section");
+marks.classList.add("bg")
 
 graph.addEventListener("click", () => {
-    slider.classList.add("moveslider");
+    // slider.classList.add("moveslider");
+    graph.classList.add("bg");
+    marks.classList.remove("bg")
     formSection.classList.add("form-section-move");
 });
 marks.addEventListener("click", () => {
-    slider.classList.remove("moveslider");
+    // slider.classList.remove("moveslider");
+    marks.classList.add("bg");
+    graph.classList.remove("bg")
     formSection.classList.remove("form-section-move");
 });

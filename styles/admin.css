@@ -14,7 +14,7 @@ header{
 
 .admin-container{
     width: 70%;
-    min-height: 700px;
+    min-height: 600px;
     /* border: 1px solid; */
     margin: 10px auto;
     margin-top: 130px;
@@ -88,7 +88,7 @@ display: none !important;
   }
   .admin-buttons{
     display: flex;
-    gap: 80px;
+    gap: 60px;
   }
   .modal-content h2{
     font-size: 34px;
@@ -262,7 +262,7 @@ select option{
     margin-bottom: 0;
 } */
 .btn {
-    height: 50px;
+    /* height: 50px; */
     width: 325px;
     margin: 20px auto;
     box-shadow: 10px 10px 30px rgb(254, 215, 188);
@@ -279,22 +279,20 @@ select option{
     border: none;
     outline: none;
     background-color: transparent;
-    position: relative;
-    cursor: pointer;
-}
- 
-.slider {
-    height: 50px;
-    width: 140px;
     border-radius: 50px;
-    background-image: linear-gradient(to right,
-            rgb(255, 195, 110),
-            rgb(255, 146, 91));
-    position: absolute;
-  
-    left: 320px;
-    transition: all 0.5s ease-in-out;
+    width: 50%;
+    cursor: pointer;
+    padding: 10px;
 }
+
+.bg{
+    background: linear-gradient(to right,
+    rgb(255, 195, 110),
+    rgb(255, 146, 91));
+    transition: 0.5s ease-in-out;
+ }
+ 
+
  
 .moveslider {
     left: 500px;

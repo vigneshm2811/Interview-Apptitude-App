@@ -13,7 +13,8 @@ doneBtn.addEventListener("click",()=>{
         passPercent:passPercent,
         marksPerQuestion:marksPerQuestion,
         attempts:attempts,
-         noOfquestion: noOfquestion,
+        remainigAttempts: attempts,
+         noOfquestion: noOfquestion
         
     }
     let examRulesData = JSON.stringify(examRules)

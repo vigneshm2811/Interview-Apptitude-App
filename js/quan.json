@@ -263,7 +263,7 @@
             "C": "octagon",
             "D": "triangle"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "triangle"
         },
         {
           "id": 23,
@@ -287,7 +287,7 @@
             "C": "winter",
             "D": "spring"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "monsoon"
         },
         {
           "id": 25,
@@ -311,7 +311,7 @@
             "C": "saturn",
             "D": "mars"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "earth"
         },
         {
           "id": 27,
@@ -335,7 +335,7 @@
             "C": "panther",
             "D": "leopard"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "giraffe"
         },
         {
           "id": 29,
@@ -384,7 +384,7 @@
       "C": "daffodil",
       "D": "tulip"
     },
-    "correctAnswer": "D"
+    "correctAnswer": "tulip"
   },
   {
     "id": 33,
@@ -408,7 +408,7 @@
       "C": "saxophone",
       "D": "flute"
     },
-    "correctAnswer": "B"
+    "correctAnswer": "drums"
   },
   {
     "id": 35,
@@ -432,7 +432,7 @@
       "C": "bookshelf",
       "D": "sofa"
     },
-    "correctAnswer": "D"
+    "correctAnswer": "sofa"
   },
   {
     "id": 37,
@@ -456,7 +456,7 @@
       "C": "asteroid",
       "D": "sun"
     },
-    "correctAnswer": "B"
+    "correctAnswer": "planet"
   },
   {
     "id": 39,
@@ -480,7 +480,7 @@
       "C": "forest",
       "D": "lake"
     },
-    "correctAnswer": "C"
+    "correctAnswer": "forest"
   },
     
         {
@@ -493,7 +493,7 @@
             "C": "The, a",
             "D": "An, a"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A, the"
         },
         {
           "id": 42,
@@ -505,7 +505,7 @@
             "C": "Celebrity",
             "D": "Celebrating"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "Celebration"
         },
         {
           "id": 43,
@@ -517,7 +517,7 @@
             "C": "A delicious meal was cooked by the chef.",
             "D": "The chef has cooked a delicious meal."
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A delicious meal is being cooked by the chef."
         },
         {
           "id": 44,
@@ -529,7 +529,7 @@
             "C": "A, the",
             "D": "An, a"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "An, the"
         },
         {
           "id": 45,
@@ -541,7 +541,7 @@
             "C": "Childes",
             "D": "Children"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "Children"
         },
         {
           "id": 46,
@@ -553,7 +553,7 @@
             "C": "Mary read the book.",
             "D": "Mary will read the book."
           },
-          "correctAnswer": "C"
+          "correctAnswer": "Mary read the book."
         },
         {
           "id": 47,
@@ -565,7 +565,7 @@
             "C": "The, an",
             "D": "A, the"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A, a"
         },
         {
           "id": 48,
@@ -577,7 +577,7 @@
             "C": "Inventing",
             "D": "Inventive"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "Invention"
         },
         {
           "id": 49,
@@ -589,7 +589,7 @@
             "C": "The championship won the team.",
             "D": "The team will win the championship."
           },
-          "correctAnswer": "A"
+          "correctAnswer": "The championship was won by the team."
         },
         {
           "id": 50,
@@ -601,7 +601,7 @@
             "C": "A, the",
             "D": "An, a"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "An, a"
         },
         {
           "id": 53,
@@ -613,7 +613,7 @@
             "C": "A, the",
             "D": "An, the"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "An, a"
         },
         {
           "id": 51,
@@ -625,7 +625,7 @@
             "C": "Micees",
             "D": "Mousen"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "Mice"
         },
         {
           "id": 52,
@@ -637,7 +637,7 @@
             "C": "The choir sings the song.",
             "D": "The choir will sing the song."
           },
-          "correctAnswer": "C"
+          "correctAnswer": "The choir sings the song."
         },
  
         {
@@ -650,7 +650,7 @@
             "C": "Confusing",
             "D": "Confused"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "Confusion"
         },
         {
           "id": 55,
@@ -662,7 +662,7 @@
             "C": "The students teach the teacher.",
             "D": "The teacher will teach the students."
           },
-          "correctAnswer": "A"
+          "correctAnswer": "The students were taught by the teacher."
         },
         {
           "id": 56,
@@ -674,7 +674,7 @@
             "C": "The, an",
             "D": "An, the"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "A, the"
         },
         {
           "id": 57,
@@ -686,7 +686,7 @@
             "C": "Geeses",
             "D": "Gosse"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "Geese"
         },
         {
           "id": 58,
@@ -698,7 +698,7 @@
             "C": "John writes the letter.",
             "D": "John will write the letter."
           },
-          "correctAnswer": "A"
+          "correctAnswer": "John wrote the letter."
         },
         {
           "id": 59,
@@ -710,7 +710,7 @@
             "C": "The, an",
             "D": "An, the"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "An, the"
         },
         {
           "id": 60,
@@ -722,9 +722,8 @@
             "C": "Information",
             "D": "Informee"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "Information"
         }
-      
       
   ]
   
