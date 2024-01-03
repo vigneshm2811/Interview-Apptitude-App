@@ -146,24 +146,6 @@ return scoresData
 }
 
 
-modifyClose .addEventListener("click",()=> modifyModal.style.display = "none")
-submit.addEventListener("click",()=>{
-  const user = document.getElementById("user")
-let username = localStorage.getItem('username')
-user.textContent = username
-  let localScoreData = JSON.stringify(scoreCal());
-
-  localStorage.setItem('scoresData',localScoreData)
-  let data =localStorage.getItem("scoresData");
-  let result = JSON.parse(data)
-  
-  console.log(result)
-  document.getElementById("quanMarks").innerHTML = result.quan
-  document.getElementById("logicMarks").innerHTML = result.logical
-  document.getElementById("verbalMarks").innerHTML = result.verbal
-  document.getElementById("totalMarks").innerHTML = result.total
-  modifyModal.style.display = "block";
-})
 
 
 
