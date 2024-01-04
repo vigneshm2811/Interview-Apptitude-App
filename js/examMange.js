@@ -48,6 +48,7 @@ let remainingAttempts = examRules.remainigAttempts
 
 
 modifyClose .addEventListener("click",()=> modifyModal.style.display = "none")
+
 submit.addEventListener("click",()=>{
   remainingAttempts -=1;
   const user = document.getElementById("user")
@@ -66,4 +67,22 @@ user.textContent = username
   document.getElementById("totalMarks").innerHTML = result.total
   document.getElementById("attempt").innerHTML = remainingAttempts
   modifyModal.style.display = "block";
+
+  clearInterval(secCountdown)
+  clearInterval(minCountdown)
+
+  if(remainingAttempts ===0 ){
+    document.getElementById("attempt").innerHTML = "out of attempt"
+    let goBack =document.getElementById("goBack")
+    document.getElementById("tryAgain").style.display ="none"
+    goBack.style.display ="block"
+    goBack.addEventListener("click",()=>{
+      window.location.href="./rules.html"
+
+    })
+    setTimeout(() => {
+      window.location.href="./rules.html"
+    }, 15000);
+  }
 })
+
