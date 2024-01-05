@@ -11,6 +11,11 @@
 body{
     background-color: rgb(236, 236, 236);
 }
+header{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
 .btnSubmit,.btnTry{
     padding: 0.6rem 0.8rem;
     border-radius: 50px;

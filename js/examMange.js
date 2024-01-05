@@ -41,7 +41,26 @@ function secCounter(){
    sec=59;
   }
 }
+ let timerInterval = setInterval(newTimer,1000)
 
+function newTimer(){
+  var totalSeconds = parseInt(examRules.minutes) * 60;
+  // console.log(totalSeconds)
+  var minutes = Math.floor(totalSeconds / 60);
+  var seconds = totalSeconds % 60;
+  console.log(seconds)
+
+  // document.getElementById('timer').innerHTML = minutes + 'm ' + seconds + 's';
+  console.log( seconds + 's')
+
+  if (totalSeconds <= 0) {
+    clearInterval(timerInterval);
+    document.getElementById('timer').innerHTML = 'Timer Complete!';
+  } else {
+    totalSeconds--;
+  }
+
+}
 // timer functions ends
 
 let remainingAttempts = examRules.remainigAttempts

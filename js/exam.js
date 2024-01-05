@@ -7,29 +7,46 @@ let currentPage = 1;
 const questionsPerPage = 10;
 const selectedOptions = [];
 
-
-
-
-
- 
+// Geting Json Data from localstorage
   let storedJsonString = localStorage.getItem('myjson');
   let localData = JSON.parse(storedJsonString);
   renderLocalStorage()
 
+  // redener the question as per section
 function renderLocalStorage(){
-  let mergedArray = [...quanPage(localData), ...logicalPage(localData), ...verbalPage(localData)];
-  console.log(mergedArray)
   renderQuestions(quanPage(localData), questionsDiv);
   renderQuestions(logicalPage(localData), questionsDiv2);
   renderQuestions(verbalPage(localData), questionsDiv3);
-  // addPagination(mergedArray);
+}
+
+// filter belongs to quantative section
+function quanPage(data){
+  let filteredData = data.filter((e)=>{
+      return e.section === "quantitative"
+  })
+  return filteredData.slice(0,10)
+}
+
+// filter belongs to logical section
+function logicalPage(data){
+  let filteredData = data.filter((e)=>{
+      return e.section === "logical"
+  })
+  return filteredData.slice(0,10)
+}
+
+// filter belongs to verbal section
+function verbalPage(data){
+  let filteredData = data.filter((e)=>{
+      return e.section === "language"
+  })
+ return filteredData.slice(0,10)
 }
 
 
-
+//function for reender the questions
 function renderQuestions(data, div) {
   div.innerHTML = "";
-
   let count=0;
 data.forEach((element)=>{
    count +=1;
@@ -53,10 +70,10 @@ data.forEach((element)=>{
  
 }
 
+// event for selecting the options
+
 selectQuestions.addEventListener('click', function (event) {
 
-  // if (event.target.classList.contains('ans-block')) {
-  // }
     if (event.target.classList.contains('option-block')) {
    
         const questionBlock = event.target.closest('.practice-question-block');
@@ -71,38 +88,19 @@ selectQuestions.addEventListener('click', function (event) {
             option.classList.remove('selected');
         });
         event.target.classList.add('selected');
+        //calling the check answer function
         checkAnswer(answerValue,selectedOptions[questionNumber],section)
 
     }
 });
 
 
-function quanPage(data){
-    let filteredData = data.filter((e)=>{
-        return e.section === "quantitative"
-    })
-    return filteredData.slice(0,10)
-}
 
-// filter belongs to logical section
-function logicalPage(data){
-    let filteredData = data.filter((e)=>{
-        return e.section === "logical"
-    })
-    return filteredData.slice(0,10)
-}
 
-// filter belongs to verbal section
-function verbalPage(data){
-    let filteredData = data.filter((e)=>{
-        return e.section === "language"
-    })
-   return filteredData.slice(0,10)
-}
+// get the selected answer and correct answer and push to an array
 let score=[]
-
 function checkAnswer(answer,selected,section){
- 
+
   let ans={
     section:section,
     correctAnswer:answer,
@@ -112,7 +110,6 @@ function checkAnswer(answer,selected,section){
 //  return score
 }
 
-// scoreCal()
 function scoreCal(){
   let total=0
   let quan=0
@@ -144,8 +141,6 @@ function scoreCal(){
 
 return scoresData
 }
-
-
 
 
 

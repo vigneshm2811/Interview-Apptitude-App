@@ -22,7 +22,11 @@ body {
     gap: 30px;
     background-color: rgb(231, 231, 231);
 }
- 
+ /* header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+ } */
 .clkbtn {
     margin:0 40%;
     height: 60px;
@@ -43,9 +47,9 @@ scale: 1.01;
 
 .rules-container{
     display: flex;
-    margin: 0 10%;
-    margin-top: 130px;
-    height: 700px;
+    margin: 20px 10%;
+
+ 
     /* background-image: linear-gradient(to right,
     rgb(255, 195, 110),
     rgb(255, 146, 91));*/
@@ -56,8 +60,8 @@ scale: 1.01;
 }
 .left-rules-div img{
     padding: 2rem;
-    width: 95%;
-    height: 100%;
+    width: 90%;
+  
 }
  .bg-Colors{
     background-image: linear-gradient(to right,
