@@ -1,3 +1,4 @@
+let goBack =document.getElementById("goBack")
 let tryAgain = document.getElementById("tryAgain");
 // data of exam rules modification
 let rulesData = localStorage.getItem('examRules')
@@ -84,13 +85,9 @@ user.textContent = username
 console.log(remainingAttempts)
   if(attempts ===0 ){
     document.getElementById("attempt").innerHTML = "0"
-    let goBack =document.getElementById("goBack")
     document.getElementById("tryAgain").style.display ="none"
     goBack.style.display ="block"
-    goBack.addEventListener("click",()=>{
-      window.location.href="./rules.html"
-      
-    })
+  
     setTimeout(() => {
       alert("Your Exam is Completed Successfully")
     }, 3000);
@@ -100,8 +97,16 @@ console.log(remainingAttempts)
   }
 }
 
+goBack.addEventListener("click",()=>{
+  alert("You will redirect in 5sec")
+  setTimeout(() => {
+    window.location.href="./rules.html"
+  }, 5000);
+  
+  
+})
 
-modifyClose .addEventListener("click",()=> modifyModal.style.display = "none")
+
 
 // submit button event
 submit.addEventListener("click",results)
@@ -115,5 +120,16 @@ tryAgain.addEventListener("click",()=>{
  }, 5000);
 })
 
+// max mark as per admin input
+document.getElementById("maxTime").innerHTML = `${examRules.minutes} min`
+let marks = examRules.marksPerQuestion
+let noQuestion = examRules.noOfquestion
 
+const maxTotal =document.getElementById("maxTotal")
+maxTotal.textContent = (marks*noQuestion)*3
+
+let maxMarksPer = document.querySelectorAll(".maxMarksPer");
+maxMarksPer.forEach((e)=>{
+  e.textContent= marks*noQuestion
+})
 

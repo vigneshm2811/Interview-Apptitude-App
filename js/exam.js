@@ -116,18 +116,19 @@ function scoreCal(){
   let logic =0
   let verbal =0
   console.log(score)
+  let marks= parseInt(examRules.marksPerQuestion)
   score.forEach((element)=>{
     if(element.correctAnswer === element.selectedAnswer){
       if(element.section === "quantitative"){
-        quan +=1
+        quan +=marks
       }
       if(element.section === "logical"){
-        logic +=1
+        logic +=marks
       }
       if(element.section === "language"){
-        verbal +=1
+        verbal +=marks
       }
-     total+=1
+     total+=marks
       console.log(total)
     }
   })
@@ -145,26 +146,29 @@ return scoresData
 
 
 // slider 
-
 let slideIndex = 1;
-      
+
 function showSlides(index) {
   const slides = document.getElementById('slides');
   const slidesCount = document.querySelectorAll('.slide').length;
-    let headingApp =document.querySelector(".headingApp")
-  switch(index){
+  let headingApp = document.querySelector(".headingApp");
+
+  // Remove the 'active' class from all dots
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  switch (index) {
     case 1:
-        headingApp.textContent = "Quantitative Aptitude"
-        break;
-    
+      headingApp.textContent = "Quantitative Aptitude";
+      break;
+
     case 2:
-        headingApp.textContent = "Logical Aptitude"
-        break;
-    
+      headingApp.textContent = "Logical Aptitude";
+      break;
+
     case 3:
-        headingApp.textContent = "Verbal Aptitude"
-        break;
-    
+      headingApp.textContent = "Verbal Aptitude";
+      break;
   }
 
   if (index > slidesCount) {
@@ -175,6 +179,9 @@ function showSlides(index) {
 
   const translateValue = -100 * (slideIndex - 1) + '%';
   slides.style.transform = 'translateX(' + translateValue + ')';
+
+  // Add the 'active' class to the current dot
+  dots[slideIndex - 1].classList.add('active');
 }
 
 function changeSlide(n) {
@@ -184,3 +191,7 @@ function changeSlide(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
+
+// Initialize by setting the first dot as active
+showSlides(slideIndex);
+

@@ -202,13 +202,13 @@ padding: 0.7rem 1.5rem;
   border-radius: 3px;
   transition: background-color .25s ease-in-out;
 }
-.dot:hover{
+
+.dot.active {
   background-image: linear-gradient(to right,
   rgb(255, 195, 110),
   rgb(255, 146, 91));
   color: #FFF;
 }
-
 
 .gradient-text {
   font-size: 38px;

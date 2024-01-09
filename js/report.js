@@ -5,6 +5,21 @@ user.textContent = username
 let data =localStorage.getItem("scoresData");
 let result = JSON.parse(data)
 
+let rulesData = localStorage.getItem('examRules')
+let examRules = JSON.parse(rulesData)
+
+// max mark as per admin input
+let markss = examRules.marksPerQuestion
+let noQuestion = examRules.noOfquestion
+
+const maxTotal =document.getElementById("maxTotal")
+maxTotal.textContent = (markss*noQuestion)*3
+
+let maxMarksPer = document.querySelectorAll(".maxMarksPer");
+maxMarksPer.forEach((e)=>{
+  e.textContent= markss*noQuestion
+})
+
 console.log(result)
 document.getElementById("quanMarks").innerHTML = result.quan
 document.getElementById("logicMarks").innerHTML = result.logical
