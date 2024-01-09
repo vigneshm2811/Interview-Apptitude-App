@@ -1,75 +1,64 @@
-
+let tryAgain = document.getElementById("tryAgain");
 // data of exam rules modification
 let rulesData = localStorage.getItem('examRules')
 let examRules = JSON.parse(rulesData)
 
+let attempts = examRules.attempts
+
+// timer functions datas
+
+let minutesInput = examRules.minutes
+
+//  let minutesInput = 1
+let totalSeconds = parseInt(minutesInput) * 60;
+let remaingSeconds =totalSeconds
+timer(totalSeconds)
+var timerInterval
 
 // timer functions starts
-let maxtime = examRules.minutes - 1 ;
-// let maxtime = 1-1;
-document.getElementById("minutes").innerHTML =leadingZero(maxtime);
 
-let secCountdown = setInterval(secCounter,1000)
-let minCountdown = setInterval(minCounter,60000)
-
-let sec=60;
-function leadingZero(value){
-  if(value<10){
-    value ="0"+value;
-  }
-  else{
-    value=value
-  }
-  return value
-}
-function minCounter(){
-  if(maxtime !=0 && maxtime>0){
-    maxtime-=1;
-  }
-  if(maxtime === 0){
-    clearInterval(secCountdown)
-  clearInterval(minCountdown)
-   }
-  console.log(maxtime)
-  document.getElementById("minutes").innerHTML = leadingZero(maxtime);
-
+ function timer(remaingSecond){
+   timerInterval = setInterval(function () {
+    let minutes = Math.floor(remaingSecond / 60);
+    
+    let seconds = remaingSecond % 60;
+    
+    document.getElementById("minutes").innerHTML = leadingZero(minutes);
+    document.getElementById("seconds").innerHTML = leadingZero(seconds);
+    // console.log( minutes + 'm ' + seconds + 's')
+    
+    if (remaingSecond <= 0) {
+      // clearInterval(timerInterval);
+      results()
+      console.log("completed")
+    } else {
+      remaingSecond--;
+    }
+    remaingSeconds =remaingSecond
+  }, 1000);
  }
-function secCounter(){
- sec-=1;
- document.getElementById("seconds").innerHTML = leadingZero(sec);
-  if(sec === 0){
-   sec=59;
-  }
-}
- let timerInterval = setInterval(newTimer,1000)
 
-function newTimer(){
-  var totalSeconds = parseInt(examRules.minutes) * 60;
-  // console.log(totalSeconds)
-  var minutes = Math.floor(totalSeconds / 60);
-  var seconds = totalSeconds % 60;
-  console.log(seconds)
-
-  // document.getElementById('timer').innerHTML = minutes + 'm ' + seconds + 's';
-  console.log( seconds + 's')
-
-  if (totalSeconds <= 0) {
-    clearInterval(timerInterval);
-    document.getElementById('timer').innerHTML = 'Timer Complete!';
-  } else {
-    totalSeconds--;
-  }
-
-}
-// timer functions ends
-
-let remainingAttempts = examRules.remainigAttempts
-
-
-modifyClose .addEventListener("click",()=> modifyModal.style.display = "none")
-
-submit.addEventListener("click",()=>{
-  remainingAttempts -=1;
+    
+    function leadingZero(value){
+      if(value<10){
+        value ="0"+value;
+      }
+      else{
+        value=value
+      }
+      return value
+    }
+    
+    // timer functions ends
+    
+    // Function for show the result
+    let remainingAttempts = parseInt(localStorage.getItem("remaingAttempt"))
+    function results() {
+      clearInterval(timerInterval);
+      // timer()
+      attempts -=1;
+      console.log(attempts)
+      localStorage.setItem("remaingAttempt",attempts)
   const user = document.getElementById("user")
 let username = localStorage.getItem('username')
 user.textContent = username
@@ -84,24 +73,47 @@ user.textContent = username
   document.getElementById("logicMarks").innerHTML = result.logical
   document.getElementById("verbalMarks").innerHTML = result.verbal
   document.getElementById("totalMarks").innerHTML = result.total
-  document.getElementById("attempt").innerHTML = remainingAttempts
+  document.getElementById("attempt").innerHTML = attempts
+
+  let timeTaken =  totalSeconds - remaingSeconds
+  let min = Math.floor(timeTaken/60)
+  let sec = timeTaken % 60
+  document.getElementById("timeTaken").innerHTML =`${leadingZero(min)} : ${leadingZero(sec)}`
   modifyModal.style.display = "block";
 
-  clearInterval(secCountdown)
-  clearInterval(minCountdown)
-
-  if(remainingAttempts ===0 ){
-    document.getElementById("attempt").innerHTML = "out of attempt"
+console.log(remainingAttempts)
+  if(attempts ===0 ){
+    document.getElementById("attempt").innerHTML = "0"
     let goBack =document.getElementById("goBack")
     document.getElementById("tryAgain").style.display ="none"
     goBack.style.display ="block"
     goBack.addEventListener("click",()=>{
       window.location.href="./rules.html"
-
+      
     })
+    setTimeout(() => {
+      alert("Your Exam is Completed Successfully")
+    }, 3000);
     setTimeout(() => {
       window.location.href="./rules.html"
     }, 15000);
   }
+}
+
+
+modifyClose .addEventListener("click",()=> modifyModal.style.display = "none")
+
+// submit button event
+submit.addEventListener("click",results)
+
+tryAgain.addEventListener("click",()=>{
+  alert("next attempt Starts in 10 sec")
+  setTimeout(() => {
+   modifyModal.style.display = "none"
+   timer(totalSeconds)
+  
+ }, 5000);
 })
+
+
 

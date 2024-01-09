@@ -13,7 +13,6 @@ doneBtn.addEventListener("click",()=>{
         passPercent:passPercent,
         marksPerQuestion:marksPerQuestion,
         attempts:attempts,
-        remainigAttempts: attempts,
          noOfquestion: noOfquestion
         
     }
