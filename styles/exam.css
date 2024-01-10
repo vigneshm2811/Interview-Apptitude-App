@@ -181,7 +181,7 @@ padding: 0.7rem 1.5rem;
 /* Optional: Add slide indicators (dots) */
 .dot-container {
   text-align: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
   justify-content: center;
 
@@ -269,5 +269,25 @@ padding: 0.7rem 1.5rem;
 .modal-header{
   padding: 1rem 0;
   margin: 1rem 0;
+}
+
+
+
+
+@media screen and (max-width: 1440px){
+
+}
+@media screen and (max-width: 768px) {
+  .exam-container{
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .exam-container{
+    width: 85%;
+    margin-left:  5%;
+    margin-right:  5%;
+  }
 }
 

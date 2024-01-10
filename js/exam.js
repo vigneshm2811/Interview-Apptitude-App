@@ -95,6 +95,13 @@ selectQuestions.addEventListener('click', function (event) {
     }
 });
 
+// function to clear the selected options
+function clearSelectedOptions() {
+  document.querySelectorAll('.option-block.selected').forEach(option => {
+    option.classList.remove('selected');
+  });
+}
+
 
 // get the selected answer and correct answer and push to an array
 let score=[]
@@ -143,8 +150,6 @@ return scoresData
 }
 
 
-
-
 // slider 
 let slideIndex = 1;
 
@@ -168,6 +173,7 @@ function showSlides(index) {
 
     case 3:
       headingApp.textContent = "Verbal Aptitude";
+      document.getElementById("submit").style.display="block"
       break;
   }
 

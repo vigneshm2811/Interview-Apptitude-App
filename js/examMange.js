@@ -138,6 +138,8 @@ goBack.addEventListener("click",()=>{
 submit.addEventListener("click",results)
 
 tryAgain.addEventListener("click",()=>{
+  score=[]
+  clearSelectedOptions()
   alert("next attempt Starts in 10 sec")
   setTimeout(() => {
    modifyModal.style.display = "none"
