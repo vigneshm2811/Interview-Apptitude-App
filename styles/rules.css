@@ -17,7 +17,7 @@ body {
     /* width: 100vw; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     gap: 30px;
     background-color: rgb(231, 231, 231);
@@ -28,9 +28,8 @@ body {
     z-index: 1;
  } */
 .clkbtn {
-    margin:0 40%;
-    height: 60px;
-    width: 150px;
+    margin:20px 40%;
+    padding: 10px 15px;
     border-radius: 50px;
     background: linear-gradient(to right, #fa6b29 0%, #fab726 100%);
     font-size: 22px;
@@ -107,7 +106,7 @@ scale: 1.01;
 
 
 .table-wrapper{
-    margin: 10px 60px 60px;
+    margin: 8px 60px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }
 
@@ -119,8 +118,8 @@ scale: 1.01;
     border: none;
     border-collapse: collapse;
     width: 100%;
-    max-width: 100%;
-    white-space: nowrap;
+   
+    
     background-color: white;
 }
 
@@ -156,101 +155,56 @@ scale: 1.01;
 
 /* For Responsiveness of the page */
  
-@media screen and (max-width: 650px) {
-    .container {
-        height: 600px;
-        width: 300px;
+
+@media screen and (max-width: 1440px){
+    .user-login{
+        margin: 0 5%;
     }
- 
-    .title {
-        font-size: 15px;
+    .admin-login{
+        margin: 0 15%
     }
- 
-    .btn {
-        height: 50px;
-        width: 200px;
-        margin: 20px auto;
-    }
- 
-    .login,
-    .signup {
-        font-size: 19px;
-    }
- 
-    .slider {
-        height: 50px;
-        width: 100px;
-        left: 50px;
-    }
- 
-    .moveslider {
-        left: 150px;
-    }
- 
-    .form-section {
-        height: 500px;
-        width: 600px;
-    }
- 
-    .form-section-move {
-        left: -300px;
-    }
- 
-    .user-login,
-    .admin-login {
-        height: 100%;
-        width: 300px;
-    }
- 
-    .inputs {
-        height: 50px;
-        width: 250px;
-        font-size: 15px;
-    }
- 
-    .clkbtn {
-        height: 50px;
-        width: 130px;
-        font-size: 19px;
+    .rules-container{
+        margin: 0 10%;
     }
 }
- 
-@media screen and (max-width: 320px) {
-    .container {
-        height: 600px;
-        width: 250px;
+
+@media screen and (max-width: 768px) {
+    .rules-container{
+        flex-direction: column;
+        align-self: auto;
+        margin: 0 10%;
     }
- 
-    .heading {
-        font-size: 30px;
+    .left-rules-div{
+        display: none;
     }
- 
-    .title {
-        font-size: 10px;
+    .right-rules-div{
+        width: 100%;
     }
- 
-    .btn {
-        height: 50px;
-        width: 200px;
-        margin: 20px auto;
+    .fl-table td {
+        font-size: 18px;
     }
- 
-    .login,
-    .signup {
-        font-size: 19px;
-    }
- 
-    .slider {
-        height: 50px;
-        width: 100px;
-        left: 27px;
-    }
- 
-    .moveslider {
-        left: 127px;
-    }
- 
-    .form-section {
-        height: 500px;
-        width: 500px;
-        }}
+    
+}
+
+@media screen and (max-width: 414px) {
+.table-wrapper{
+    margin: 0;
+}
+.right-rules-div{
+   padding: 0.6rem 1rem;
+}
+.title-sub{
+    font-size: 22px;
+    margin: 8px 0;
+}
+.title-main{
+    font-size: 26px;
+
+}
+.rules-container{
+    margin: 0 5%;
+} 
+.fl-table td {
+    font-size: 16px;
+}
+}

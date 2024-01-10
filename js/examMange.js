@@ -52,6 +52,20 @@ var timerInterval
     
     // timer functions ends
     
+    // max mark as per admin input
+document.getElementById("maxTime").innerHTML = `${examRules.minutes} min`
+let marks = examRules.marksPerQuestion;
+let noQuestion = examRules.noOfquestion;
+const maxTotalMarks =(marks*noQuestion)*3;
+const maxTotal =document.getElementById("maxTotal");
+maxTotal.textContent = maxTotalMarks;
+
+let maxMarksPer = document.querySelectorAll(".maxMarksPer");
+maxMarksPer.forEach((e)=>{
+  e.textContent= marks*noQuestion;
+})
+
+
     // Function for show the result
     let remainingAttempts = parseInt(localStorage.getItem("remaingAttempt"))
     function results() {
@@ -63,11 +77,13 @@ var timerInterval
   const user = document.getElementById("user")
 let username = localStorage.getItem('username')
 user.textContent = username
-  let localScoreData = JSON.stringify(scoreCal());
 
+// data of scores and percentage
+  let localScoreData = JSON.stringify(scoreCal());
   localStorage.setItem('scoresData',localScoreData)
   let data =localStorage.getItem("scoresData");
   let result = JSON.parse(data)
+  
   
   console.log(result)
   document.getElementById("quanMarks").innerHTML = result.quan
@@ -81,6 +97,15 @@ user.textContent = username
   let sec = timeTaken % 60
   document.getElementById("timeTaken").innerHTML =`${leadingZero(min)} : ${leadingZero(sec)}`
   modifyModal.style.display = "block";
+
+  const perecntageResult = document.getElementById("perecntageResult")
+  if(result.percentage >= examRules.passPercent){
+    perecntageResult.innerHTML = `Congrats You Got <span class="gradient-text" style="font-size: 32px">${result.percentage}%</span>  Passed the test`
+  }
+  else{
+    console.log("sorry Your fail try again")
+    perecntageResult.innerHTML = `Sorry You Got only <span class="gradient-text" style="font-size: 32px">${result.percentage}%</span> Try again`
+  }
 
 console.log(remainingAttempts)
   if(attempts ===0 ){
@@ -108,6 +133,7 @@ goBack.addEventListener("click",()=>{
 
 
 
+
 // submit button event
 submit.addEventListener("click",results)
 
@@ -118,18 +144,5 @@ tryAgain.addEventListener("click",()=>{
    timer(totalSeconds)
   
  }, 5000);
-})
-
-// max mark as per admin input
-document.getElementById("maxTime").innerHTML = `${examRules.minutes} min`
-let marks = examRules.marksPerQuestion
-let noQuestion = examRules.noOfquestion
-
-const maxTotal =document.getElementById("maxTotal")
-maxTotal.textContent = (marks*noQuestion)*3
-
-let maxMarksPer = document.querySelectorAll(".maxMarksPer");
-maxMarksPer.forEach((e)=>{
-  e.textContent= marks*noQuestion
 })
 

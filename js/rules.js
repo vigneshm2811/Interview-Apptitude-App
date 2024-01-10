@@ -14,5 +14,6 @@ let nQwestions = document.querySelectorAll(".noOfquestion")
 nQwestions.forEach((element)=>{
     element.textContent=examRules.noOfquestion
 })
+document.getElementById("pass").textContent = `${examRules.passPercent} %`
 document.getElementById("mins").textContent =examRules.minutes
 document.getElementById("attempts").textContent = examRules.attempts

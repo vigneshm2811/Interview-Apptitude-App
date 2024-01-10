@@ -4,7 +4,7 @@ let questionsDiv3 = document.getElementById("questionsDiv3");
 let submit = document.getElementById("submit");
 let selectQuestions = document.querySelector("#slides");
 let currentPage = 1;
-const questionsPerPage = 10;
+const questionsPerPage = examRules.noOfquestion;
 const selectedOptions = [];
 
 // Geting Json Data from localstorage
@@ -19,12 +19,13 @@ function renderLocalStorage(){
   renderQuestions(verbalPage(localData), questionsDiv3);
 }
 
+
 // filter belongs to quantative section
 function quanPage(data){
   let filteredData = data.filter((e)=>{
       return e.section === "quantitative"
   })
-  return filteredData.slice(0,10)
+  return filteredData.slice(0,questionsPerPage)
 }
 
 // filter belongs to logical section
@@ -32,7 +33,7 @@ function logicalPage(data){
   let filteredData = data.filter((e)=>{
       return e.section === "logical"
   })
-  return filteredData.slice(0,10)
+  return filteredData.slice(0,questionsPerPage)
 }
 
 // filter belongs to verbal section
@@ -40,7 +41,7 @@ function verbalPage(data){
   let filteredData = data.filter((e)=>{
       return e.section === "language"
   })
- return filteredData.slice(0,10)
+ return filteredData.slice(0,questionsPerPage)
 }
 
 
@@ -95,8 +96,6 @@ selectQuestions.addEventListener('click', function (event) {
 });
 
 
-
-
 // get the selected answer and correct answer and push to an array
 let score=[]
 function checkAnswer(answer,selected,section){
@@ -111,11 +110,8 @@ function checkAnswer(answer,selected,section){
 }
 
 function scoreCal(){
-  let total=0
-  let quan=0
-  let logic =0
-  let verbal =0
-  console.log(score)
+  let total=0,quan=0,logic=0,verbal=0;
+  console.log(score);
   let marks= parseInt(examRules.marksPerQuestion)
   score.forEach((element)=>{
     if(element.correctAnswer === element.selectedAnswer){
@@ -132,16 +128,20 @@ function scoreCal(){
       console.log(total)
     }
   })
+  let precntage = Math.floor((total/maxTotalMarks)*100)
+  console.log(precntage)
   let scoresData ={
     quan:quan,
     logical:logic,
     verbal: verbal,
-    total:total
+    total:total,
+    percentage: precntage
   }
   console.log(scoresData)
 
 return scoresData
 }
+
 
 
 
