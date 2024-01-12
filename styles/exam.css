@@ -217,21 +217,21 @@ padding: 0.7rem 1.5rem;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
-.table-wrapper{
+/* .table-wrapper{
   margin: 10px 70px;
   box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
-}
+} */
 
 .fl-table {
+  margin: 0 auto;
   margin-top: 50px;
   border-radius: 5px;
   /* font-size: 20px; */
   font-weight: normal;
   border: none;
   border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
-  white-space: nowrap;
+  width: 90%;
+
   background-color: white;
 }
 
@@ -281,6 +281,23 @@ padding: 0.7rem 1.5rem;
   .exam-container{
     width: 75%;
   }
+  .fl-table td, .fl-table th {
+    padding: 4px;
+  }
+  
+  .fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 16px;
+  }
+  .fl-table thead th {
+
+    font-size: 20px;
+    padding: 4px;
+    font-weight: 500;
+  }
+  .modal-content{
+width: 80%;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -288,6 +305,60 @@ padding: 0.7rem 1.5rem;
     width: 85%;
     margin-left:  5%;
     margin-right:  5%;
+  }
+  .gradient-text{
+    font-size: 25px;
+  }
+  .modal-header{
+    font-size: 18px;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .fl-table{
+    margin-top: 10px;
+  }
+  .atmpt{
+    font-size: 16px;
+  }
+  #perecntageResult{
+    font-size: 18px;
+  }
+  .headingApp{
+    font-size: 30px;
+    margin:0;
+    padding: 0 0.5rem;
+  }
+  .question-text{
+    font-size: 16px;
+  }
+  .question-no{
+    font-size: 12px;
+  }
+  
+  .option-block{
+    padding: 0.5rem;
+    margin-bottom: 8px;
+    box-shadow: 0px 0px 4px 0 rgba(139, 138, 138, 0.829);
+    font-size: 16px;
+  }
+  .btnTry{
+    font-size: 16px;
+    padding: 0.4rem 0.6rem;
+  }
+  .fl-table td {
+   
+    font-size: 10px;
+  }
+  .fl-table thead th {
+
+    font-size: 14px;
+
+  }
+  #perecntageResult{
+    font-size: 14px !important;
+  }
+  .gradient-text{
+    font-size: 20px !important;
   }
 }
 

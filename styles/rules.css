@@ -150,8 +150,22 @@ scale: 1.01;
 .fl-table tr:nth-child(even) {
     background: #F8F8F8;
 }
+thead th {
+  
+    background: #eeb842 !important;
 
-
+}
+thead th:nth-child(odd) {
+    /* font-weight: 400; */
+    /* color: #ffffff; */
+    background:#fc7d42 !important;
+}
+td,th{
+    text-align: center !important; 
+    font-size: 18px !important;
+    border-collapse: collapse;
+    border: 1px solid rgba(128, 128, 128, 0.438) !important;
+}
 
 /* For Responsiveness of the page */
  
@@ -194,11 +208,11 @@ scale: 1.01;
    padding: 0.6rem 1rem;
 }
 .title-sub{
-    font-size: 22px;
+    font-size: 20px !important;
     margin: 8px 0;
 }
 .title-main{
-    font-size: 26px;
+    font-size: 26px !important;
 
 }
 .rules-container{
@@ -206,5 +220,17 @@ scale: 1.01;
 } 
 .fl-table td {
     font-size: 16px;
+}
+td{
+    font-size: 16px !important;
+    padding: 8px !important;
+}
+.clkbtn{
+    font-size: 16px;
+    margin: 0 !important;
+}
+.gradient-text {
+    font-size: 28px !important;
+
 }
 }
